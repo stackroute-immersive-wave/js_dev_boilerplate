@@ -6,7 +6,7 @@ module.exports = {
     "es6": true
   },
 
-  
+
 
   "ecmaFeatures": {
     "arrowFunctions": true,
@@ -225,6 +225,7 @@ module.exports = {
     //
     // React specific linting rules for ESLint
     //
+
   //   "react/display-name": 0, // Prevent missing displayName in a React component definition
   //   "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
   //   "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
@@ -239,4 +240,5 @@ module.exports = {
   //   "react/self-closing-comp": 2, // Prevent extra closing tags for components without children
   //   "react/jsx-wrap-multilines": 2, // Prevent missing parentheses around multilines JSX
    }
+
 }
