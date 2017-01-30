@@ -3,7 +3,7 @@ var expect = chai.expect;
 var jsonDiff = require('./jsondiff');
 var totalObjectKeys = require('./totalObjectKeys');
 var expectedJSON = require('./expectedjson/expectedJsonArun1.json');
-var actualJSON = require('../outputdata/outputJsonArun2.json');
+var actualJSON = require('../outputdata/outputJsonArun1.json');
 describe('Test Application as Blackbox', function(){
   it ('Test JSON is well formed', function(done){
     /*ToDO Parse JSON*/
@@ -15,7 +15,7 @@ describe('Test Application as Blackbox', function(){
     expect(objMatrix.totalNoKeys).to.not.equal(0);
     done();
   });
-  it.skip('Test JSON is as expected', function(done){
+  it('Test JSON is as expected', function(done){
     var compareResult = jsonDiff.compareJSONObjects(expectedJSON, actualJSON);
     expect(compareResult.diffs).equal(0);
     done();
