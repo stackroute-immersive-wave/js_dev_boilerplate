@@ -213,13 +213,10 @@ module.exports = {
     // While the names of the rules may not match up with the JSHint/JSLint counterpart,
     // the functionality is the same.
     //
-<<<<<<< HEAD
     "max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
     "max-len": [2, 150, 2], // specify the maximum length of a line in your program (off by default)
-=======
     //"max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
     "max-len": [2, 100, 2], // specify the maximum length of a line in your program (off by default)
->>>>>>> 00ca6eb4ba5308c1574994c1ed625ca661953bd4
     "max-params": [2, 5], // limits the number of parameters that can be used in the function declaration. (off by default)
     "max-statements": 0, // specify the maximum number of statement allowed in a function (off by default)
     "no-bitwise": 0, // disallow use of bitwise operators (off by default)
