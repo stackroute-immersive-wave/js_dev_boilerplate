@@ -1,4 +1,3 @@
-
 const should = require("chai").should(),
 expect = require("chai").expect,
 sinon = require('sinon'),
@@ -70,7 +69,6 @@ describe("Test createInterface method of readline", function(err){
     });
 
  	});
-=======
 const should = require("chai").should(),
 expect = require("chai").expect,
 sinon = require('sinon'),
