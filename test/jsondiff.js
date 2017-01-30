@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
 module.exports = (function(){
   return {
     compareJSONStrings: function(expectedJSONStr, actualJSONStr) {
@@ -48,25 +44,14 @@ module.exports = (function(){
         return objValues(obj).sort().join(';')
       }
       function objValues(obj) {
-<<<<<<< HEAD
         var keys = Object.keys(obj);
         var values = [];
         keys.forEach(function(keyName) {
           var val = obj[keyName];
-=======
-        let keys = Object.keys(obj);
-        let values = [];
-        keys.forEach(function(keyName) {
-          let val = obj[keyName];
->>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
           values.push(val);
         });
         return values;
       }
     }
-<<<<<<< HEAD
   }
-=======
-  };
->>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
 })();
