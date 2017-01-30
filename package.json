@@ -1,14 +1,26 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8beaed2d2b01076a5e69852e788e031d5d2ec80b
 {
   "name": "Data_Munging_Tool",
   "version": "1.0.0",
   "scripts": {
     "test": "mocha",
     "build": "gulp build",
+<<<<<<< HEAD
     "execute": "node js/testCodeQuality.js"
+=======
+    "execute": "node js/foodFacts2.js"
+>>>>>>> 8beaed2d2b01076a5e69852e788e031d5d2ec80b
   },
   "author": "StackRoute",
   "license": "Apache-2.0",
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "chai": "^3.5.0",
+>>>>>>> 8beaed2d2b01076a5e69852e788e031d5d2ec80b
     "gulp": "^3.9.1",
     "log4js": "^1.0.1",
     "sinon": "^1.17.7"

@@ -3,13 +3,13 @@ expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
-convert = require("../js/outputJsonaswini2.js");
+convert = require("../js/Male_Female_Expentency");
 
 describe("A series of test for Converting  CSV to JSON", 
 	function(err){
 
   it("should return sucess message", function(done){
-  	var result = convert(2001);  
+  	var result = convert(2001,2010);  
   	result.should.be.equal('JSON written successfully');  	  
     done();
     });
@@ -20,7 +20,7 @@ describe("A series of test for Converting  CSV to JSON",
     });
 
   it('should fail if year is not a number', function(done){
-        expect(convert.bind(undefined, {})).to.throw(Error, "Not a number");
+        expect(convert.bind(undefined, {},{})).to.throw(Error, "Not a number");
         done();
     });
 
@@ -53,7 +53,7 @@ describe("Test createInterface method of readline", function(err){
     it("should be called", function() {
            var stub = sinon.stub(readline.Interface.prototype, 'on');
            convert(2016);
-           sinon.assert.called(stub);
+           // sinon.assert.called(stub);
            readline.Interface.prototype.on.restore();
            sinon.assert.calledWith(stub,"line");        
 
