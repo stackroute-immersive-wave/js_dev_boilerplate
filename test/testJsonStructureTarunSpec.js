@@ -2,11 +2,14 @@ var chai = require('chai');
 var expect = chai.expect;
 var jsonDiff = require('./jsondiff');
 var totalObjectKeys = require('./totalObjectKeys');
-var expectedJSON = require('./expectedjson/expectedjsonKeerthana1.json');
-var actualJSON = require('../outputdata/outputjsonKeerthana1.json');
+var expectedJSON = require('./expectedjson/expectedJsonTarun.json');
+var actualJSON = require('../outputdata/actualJsonTarun.json');
+var func = require('../js/Assignment.js');
 describe('Test Application as Blackbox', function(){
-  it ('Test JSON is well formed', function(done){
+  it('Test JSON is well formed', function(done){
     /*ToDO Parse JSON*/
+    var result = func(1960, 1970);
+    expect(result).equal('JSON written successfully');
     done();
   });
   it('JSON has expected Number of Objects', function(done){

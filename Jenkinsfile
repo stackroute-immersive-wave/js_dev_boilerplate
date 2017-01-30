@@ -14,5 +14,5 @@ node {
 
   stage 'Testing'
   sh "npm run test"
- 
+
 }
