@@ -168,7 +168,7 @@ module.exports = {
     "newline-after-var": 0, // allow/disallow an empty newline after var statement (off by default)
     "no-array-constructor": 1, // disallow use of the Array constructor
     "no-inline-comments": 1, // disallow comments inline after code (off by default)
-    "no-lonely-if": 1, // disallow if as the only statement in an else block (off by default)
+    //"no-lonely-if": 1, // disallow if as the only statement in an else block (off by default)
     "no-mixed-spaces-and-tabs": 1, // disallow mixed spaces and tabs for indentation
     "no-multiple-empty-lines": [1, {"max": 2}], // disallow multiple empty lines (off by default)
     "no-nested-ternary": 1, // disallow nested ternary expressions (off by default)
@@ -213,7 +213,7 @@ module.exports = {
     // While the names of the rules may not match up with the JSHint/JSLint counterpart,
     // the functionality is the same.
     //
-    "max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
+    //"max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
     "max-len": [2, 100, 2], // specify the maximum length of a line in your program (off by default)
     "max-params": [2, 5], // limits the number of parameters that can be used in the function declaration. (off by default)
     "max-statements": 0, // specify the maximum number of statement allowed in a function (off by default)
@@ -251,5 +251,6 @@ module.exports = {
     // "react/react-in-jsx-scope": 0, // Prevent missing React when using JSX
     // "react/self-closing-comp": 0, // Prevent extra closing tags for components without children
     // "react/jsx-wrap-multilines": 0, // Prevent missing parentheses around multilines JSX
+
   }
 }
