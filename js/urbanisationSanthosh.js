@@ -32,14 +32,14 @@ module.exports = function converter(startYear, endYear, countryArray) {
           && linearr[4] <= endYear) && linearr[3] === 'SP.URB.TOTL.IN.ZS')
         {
           arr1.push({
-            'year': linearr[4],
+            year: linearr[4],
             'Rural population (% of total)': rural,
             'Urban population (% of total)': linearr[5]});
         }
         if(linearr[1] === 'IND' && (linearr[4] >= startYear &&
           linearr[4] <= endYear) && linearr[3] === 'SP.URB.GROW')
         {
-          arr2.push({'year':linearr[4], 'Urban population growth (annual %)':linearr[5]});
+          arr2.push({year: linearr[4], 'Urban population growth (annual %)': linearr[5]});
         }
 
         for (let i = 0; i < countryArray.length; i = i + 1) {
@@ -57,9 +57,9 @@ module.exports = function converter(startYear, endYear, countryArray) {
     rd.on('close', function() {
       for(let i = 0; i < countryArray.length; i = i + 1) {
           arr3.push({
-            'Country':countryArray[i],
-            'Urban':urbanArr[i],
-            'Rural':ruralArr[i]});
+            Country: countryArray[i],
+            Urban: urbanArr[i],
+            Rural: ruralArr[i]});
       }
     //  console.log(arr3);
     //  console.log(arr3.length);
