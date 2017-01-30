@@ -11,6 +11,7 @@ node {
   sh "npm install"
 
 
+
   stage 'Linting'
   sh "npm run build"
 
@@ -18,4 +19,3 @@ node {
   sh "npm run test"
 
 }
-

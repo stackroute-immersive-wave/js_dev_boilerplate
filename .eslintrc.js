@@ -230,6 +230,7 @@ module.exports = {
     // React specific linting rules for ESLint
     //
 
+
     // "react/display-name": 0, // Prevent missing displayName in a React component definition
     // "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
     // "react/jsx-sort-props": 0, // Enforce props alphabetical sorting

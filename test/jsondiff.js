@@ -44,14 +44,14 @@ module.exports = (function(){
         return objValues(obj).sort().join(';')
       }
       function objValues(obj) {
-        let keys = Object.keys(obj);
-        let values = [];
+        var keys = Object.keys(obj);
+        var values = [];
         keys.forEach(function(keyName) {
-          let val = obj[keyName];
+          var val = obj[keyName];
           values.push(val);
         });
         return values;
       }
     }
-  };
+  }
 })();
