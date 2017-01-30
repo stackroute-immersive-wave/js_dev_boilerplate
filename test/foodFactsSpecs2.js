@@ -5,17 +5,13 @@ const should = require('chai').should();
 const expect = require('chai').expect;
 const sinon = require('sinon');
 const readline = require('readline');
-const convert = require('../js/foodFacts1');
+const convert = require('../js/foodFactsSindhu2');
 let jsonDiff = require('./jsondiff');
 let totalObjectKeys = require('./totalObjectKeys');
-let expectedJSON = require('./expectedjson/expectedJsonSindhu1.json');
-let actualJSON = require('../outputdata/outputJsonSindhu1.json');
+let expectedJSON = require('./expectedjson/expectedJsonSindhu2.json');
+let actualJSON = require('../outputdata/outputJsonSindhu2.json');
 
 describe('Test Application as Blackbox', function() {
-    it('Test JSON is well formed', function(done) {
-        /*ToDO Parse JSON*/
-        done();
-    });
     it('JSON has expected Number of Objects', function(done) {
         let objMatrix = totalObjectKeys.traverse(actualJSON);
         expect(objMatrix.totalNoObjects).to.not.equal(0);
@@ -63,20 +59,20 @@ describe('Test Application as WhiteBox', function() {
         expect(convert.main.bind('undefined', countries)).to.not.throw(Error, 'the array is  well defined');
         done();
     });
-    it('should output the input that we send ', function(done) {
-        let input = ['United Kingdom', 'Denmark', 'Sweden', 'Norway'];
-        let result = convert.main(input);
-        result.should.be.equal(input).and.have.lengthOf(4);
-      //  console.log(result);
-        done();
-    });
-    it('should be uuu an array', function(done) {
-        let input = 'Canada';
-        let result = convert.greet(input, countries);
-        result.should.to.be.a.Number;
-        expect(result).to.be.at.most(countries.length - 1);
-        done();
-    });
+    // it('should output the input that we send ', function(done) {
+    //     let input = ['United Kingdom', 'Denmark', 'Sweden', 'Norway'];
+    //     let result = convert.main(input);
+    //     result.should.be.equal(input).and.have.lengthOf(4);
+    //   //  console.log(result);
+    //     done();
+    // });
+    // it('should be uuu an array', function(done) {
+    //     let input = 'Canada';
+    //     let result = convert.greet(input, countries);
+    //     result.should.to.be.a.Number;
+    //     expect(result).to.be.at.most(countries.length - 1);
+    //     done();
+    // });
 });
 describe('Test createInterface method of readline', function(err) {
     it('should be called only once', function() {
