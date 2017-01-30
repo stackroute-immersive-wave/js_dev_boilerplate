@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
 {
   "name": "Data_Munging_Tool",
   "version": "1.0.0",
   "scripts": {
     "test": "mocha",
     "build": "gulp build",
-<<<<<<< HEAD
     "execute": "node js/ageconverter"
-=======
+
     "execute": "node js/foodFacts2.js"
->>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
   },
   "author": "StackRoute",
   "license": "Apache-2.0",
@@ -38,10 +33,3 @@
     "mocha": "^3.1.2"
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
-=======
->>>>>>> 32b07bbb0fd410c08ccb3478e5c10045736fc5a4
