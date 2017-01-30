@@ -9,6 +9,8 @@ node {
   stage 'Installing Dependencies'
   sh "npm prune"
   sh "npm install"
+<<<<<<< HEAD
+=======
 
 
   stage 'Linting'
@@ -19,3 +21,4 @@ node {
 
 }
 
+>>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
