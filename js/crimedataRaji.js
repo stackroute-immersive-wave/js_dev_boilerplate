@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 module.exports = (function(age)
 {
 if(!age){
@@ -33,6 +32,7 @@ for (i = 0; i <= 15; i = i + 1) {
     noArrest[i] = 0;
 }
 let isHeader = true;
+/*creating interface*/
 const rl = readline.createInterface({
 
     input: fs.createReadStream('../inputdata/crimedata.csv')
@@ -84,6 +84,7 @@ rl.on('close', function() {
         tempData2['Not Arrested'] = noArrest[i];
         jsonData2.push(tempData2);
     }
+    /*getting json values*/
     fs.writeFileSync('../outputdata/outputJsonRaji1.json', JSON.stringify(jsonData1), 'utf8');
     logger.debug('Writtten to file 1');
     fs.writeFileSync('../outputdata/outputJsonRaji2.json', JSON.stringify(jsonData2), 'utf8');
@@ -142,4 +143,3 @@ module.exports = function convertCsv(startYear) {
   });
   return 'JSON written successfully';
 };
->>>>>>> 6304e2d147324248d0009a539904732f6d42d448
