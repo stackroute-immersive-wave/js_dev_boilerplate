@@ -2,8 +2,10 @@ var chai = require('chai');
 var expect = chai.expect;
 var jsonDiff = require('./jsondiff');
 var totalObjectKeys = require('./totalObjectKeys');
-var expectedJSON = require('./expectedjson/Male_Female_Expentency_Exp_gourab.json');
-var actualJSON = require('../outputdata/Male_Female_Expentency_Act_gourab.json');
+var expectedJSON = require('./expectedjson/expectedJsonThreka1.json');
+ var actualJSON = require('../outputdata/outputJsonThreka1.json');
+ //var actualJSON = require('../outputdata/Birth_Death.json');
+ // var actualJSON = require('../outputdata/Total_Expentency.json');
 describe('Test Application as Blackbox', function(){
   it ('Test JSON is well formed', function(done){
     /*ToDO Parse JSON*/

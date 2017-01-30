@@ -246,8 +246,7 @@ module.exports = {
     // eslint-plugin-react
     //
     // React specific linting rules for ESLint
-    //
-
+    //5fcbfe6a7e845379b387a6553ddb2b
     // "react/display-name": 0, // Prevent missing displayName in a React component definition
     // "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
     // "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
@@ -261,6 +260,7 @@ module.exports = {
     // "react/react-in-jsx-scope": 2, // Prevent missing React when using JSX
     // "react/self-closing-comp": 2, // Prevent extra closing tags for components without children
     // "react/jsx-wrap-multilines": 2, // Prevent missing parentheses around multilines JSX
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -282,6 +282,13 @@ module.exports = {
 
 =======
 >>>>>>> 801d5d63957283f3744099ffc8055fdfa5785fc7
+=======
+// <<<<<<< HEAD
+// =======
+
+
+
+>>>>>>> 38118050f2e6218843731b71a5fce626d1d2d12e
 
     // "react/display-name": 0, // Prevent missing displayName in a React component definition
     // "react/jsx-no-undef": 0, // Disallow undeclared variables in JSX
@@ -298,10 +305,15 @@ module.exports = {
     // "react/jsx-wrap-multilines": 0, // Prevent missing parentheses around multilines JSX
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
 =======
 >>>>>>> 801d5d63957283f3744099ffc8055fdfa5785fc7
+=======
+
+// >>>>>>> 120d00f8ad5fcbfe6a7e845379b387a6553ddb2b
+>>>>>>> 38118050f2e6218843731b71a5fce626d1d2d12e
   }
 
 }

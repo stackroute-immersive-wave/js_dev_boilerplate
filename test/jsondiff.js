@@ -18,7 +18,7 @@ module.exports = (function(){
         }
       }
     },
-  compareJSONObjects:   function(expectedJSON, actualJSON) {
+    compareJSONObjects:   function(expectedJSON, actualJSON) {
       if (!expectedJSON || !actualJSON) {
         return;
       }
@@ -56,49 +56,14 @@ module.exports = (function(){
         return objValues(obj).sort().join(';')
       }
       function objValues(obj) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 32b07bbb0fd410c08ccb3478e5c10045736fc5a4
-=======
->>>>>>> 801d5d63957283f3744099ffc8055fdfa5785fc7
         var keys = Object.keys(obj);
         var values = [];
         keys.forEach(function(keyName) {
           var val = obj[keyName];
-<<<<<<< HEAD
-<<<<<<< HEAD
-       let keys = Object.keys(obj);
-        let values = [];
-        keys.forEach(function(keyName) {
-          let val = obj[keyName];
-       values.push(val);
-=======
-=======
-        let keys = Object.keys(obj);
-        let values = [];
-        keys.forEach(function(keyName) {
-          let val = obj[keyName];
->>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
-=======
->>>>>>> 801d5d63957283f3744099ffc8055fdfa5785fc7
           values.push(val);
->>>>>>> 32b07bbb0fd410c08ccb3478e5c10045736fc5a4
         });
         return values;
       }
     }
   }
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-  }
-=======
-  };
->>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
->>>>>>> 32b07bbb0fd410c08ccb3478e5c10045736fc5a4
-=======
->>>>>>> 801d5d63957283f3744099ffc8055fdfa5785fc7
 })();
