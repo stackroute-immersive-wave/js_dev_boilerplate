@@ -16,7 +16,11 @@ node {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
+=======
+
+>>>>>>> 32b07bbb0fd410c08ccb3478e5c10045736fc5a4
   stage 'Linting'
   sh "npm run build"
 
@@ -28,5 +32,8 @@ node {
 =======
 
 }
+<<<<<<< HEAD
 
 >>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
+=======
+>>>>>>> 32b07bbb0fd410c08ccb3478e5c10045736fc5a4

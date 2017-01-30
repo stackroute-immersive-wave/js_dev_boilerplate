@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
 module.exports = (function(){
   return {
     compareJSONStrings: function(expectedJSONStr, actualJSONStr) {
@@ -56,19 +60,41 @@ module.exports = (function(){
         return objValues(obj).sort().join(';')
       }
       function objValues(obj) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 32b07bbb0fd410c08ccb3478e5c10045736fc5a4
         var keys = Object.keys(obj);
         var values = [];
         keys.forEach(function(keyName) {
           var val = obj[keyName];
+<<<<<<< HEAD
        let keys = Object.keys(obj);
         let values = [];
         keys.forEach(function(keyName) {
           let val = obj[keyName];
        values.push(val);
+=======
+=======
+        let keys = Object.keys(obj);
+        let values = [];
+        keys.forEach(function(keyName) {
+          let val = obj[keyName];
+>>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
+          values.push(val);
+>>>>>>> 32b07bbb0fd410c08ccb3478e5c10045736fc5a4
         });
         return values;
       }
     }
+<<<<<<< HEAD
   }
 }
+=======
+<<<<<<< HEAD
+  }
+=======
+  };
+>>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
+>>>>>>> 32b07bbb0fd410c08ccb3478e5c10045736fc5a4
 })();

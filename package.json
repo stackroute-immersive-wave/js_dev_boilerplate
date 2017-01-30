@@ -17,6 +17,9 @@
   "author": "StackRoute",
   "license": "Apache-2.0",
   "dependencies": {
+
+    "chai": "^3.5.0",
+
     "gulp": "^3.9.1",
     "log4js": "^1.0.1",
     "sinon": "^1.17.7"
@@ -38,6 +41,9 @@
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
+=======
+>>>>>>> 32b07bbb0fd410c08ccb3478e5c10045736fc5a4
