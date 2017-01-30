@@ -124,7 +124,7 @@ secondcri.sort(function(a, b) {
   return a.Year - b.Year;
 });
   fs.writeFileSync('barchart.json', JSON.stringify(firstcri));
-  fs.writeFileSync('linechart.json', JSON.stringify(secondcri));
+  fs.writeFileSync('linechart-soundar.json', JSON.stringify(secondcri));
   // console.log(firstcri);
   // console.log(secondcri);
 });
