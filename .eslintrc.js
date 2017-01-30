@@ -230,6 +230,7 @@ module.exports = {
     // React specific linting rules for ESLint
     //
 
+
     // "react/display-name": 0, // Prevent missing displayName in a React component definition
     // "react/jsx-no-undef": 0, // Disallow undeclared variables in JSX
     // "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
@@ -262,6 +263,7 @@ module.exports = {
    }
 
 
+
     // "react/display-name": 0, // Prevent missing displayName in a React component definition
     // "react/jsx-no-undef": 0, // Disallow undeclared variables in JSX
     // "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
@@ -275,6 +277,3 @@ module.exports = {
     // "react/react-in-jsx-scope": 0, // Prevent missing React when using JSX
     // "react/self-closing-comp": 0, // Prevent extra closing tags for components without children
     // "react/jsx-wrap-multilines": 0, // Prevent missing parentheses around multilines JSX
-  }
-
-}
