@@ -1,3 +1,4 @@
+
 node {
   stage: 'Environment Variables'
   sh "env"
@@ -17,3 +18,4 @@ node {
   sh "npm run test"
 
 }
+
