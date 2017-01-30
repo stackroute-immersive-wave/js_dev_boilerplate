@@ -94,6 +94,7 @@ module.exports = (country) => {
                         proteinCentralEurope = proteinCentralEurope + Number(protein);
                         carboCentralEurope = carboCentralEurope + Number(carbo);
                     }
+                    // check whether the given country is in south Europe
                     if (southEurope.includes(countries[i])) {
                         fatSouthEurope = fatSouthEurope + Number(fat);
                         proteinSouthEurope = proteinSouthEurope + Number(protein);
@@ -101,28 +102,32 @@ module.exports = (country) => {
                     }
                 }
             }
+            // adding salt and sugar for the given nine countries
             if (snscountry.includes(values[countryIndex])) {
                 let snscountryIndex = cntrindex(values[countryIndex]);
                 salt[snscountryIndex] = salt[snscountryIndex] + Number(values[saltIndex]);
                 sugar[snscountryIndex] = sugar[snscountryIndex] + Number(values[sugarIndex]);
             }
-
+            // checking countries for north, central and south europe
             if (countryforNorthEurope || countryforCentralEurope || countryforSouthEurope) {
                 let fat = values[fatIndex];
                 let protein = values[protienIndex];
                 let carbo = values[carboIndex];
+                // checking countries and adding corresponding values for north Europe
                 if (countryforNorthEurope) {
                     fatNorthEurope = fatNorthEurope + Number(fat);
                     proteinNorthEurope = proteinNorthEurope + Number(protein);
                     carboNorthEurope = carboNorthEurope + Number(carbo);
                     countryforNorthEurope = false;
                 }
+                // checking countries and adding corresponding values for central Europe
                 if (countryforCentralEurope) {
                     fatCentralEurope = fatCentralEurope + Number(fat);
                     proteinCentralEurope = proteinCentralEurope + Number(protein);
                     carboCentralEurope = carboCentralEurope + Number(carbo);
                     countryforCentralEurope = false;
                 }
+                // checking countries and adding corresponding values for south Europe
                 if (countryforSouthEurope) {
                     fatSouthEurope = fatSouthEurope + Number(fat);
                     proteinSouthEurope = proteinSouthEurope + Number(protein);
@@ -131,8 +136,9 @@ module.exports = (country) => {
                 }
             }
         });
-
+        // in close event we are adding the objects to json array
         rd.on('close', () => {
+            // assigning values for objects and pushing it in json array
             for (let i = 0; i < snscountry.length; i = i + 1) {
                 let obj = {};
                 obj.country = snscountry[i];
@@ -140,7 +146,7 @@ module.exports = (country) => {
                 obj.salt = salt[i];
                 jsonArray.push(obj);
             }
-
+            // assigning for objects of north,central and south europe and pushing it in json array
             let objNorthEurope = {
                 region: 'North Europe',
                 fat: fatNorthEurope,
@@ -163,8 +169,9 @@ module.exports = (country) => {
             jsonArray1.push(objNorthEurope);
             jsonArray1.push(objCentralEurope);
             jsonArray1.push(objSouthEurope);
-            fs.writeFileSync('../outputdata/outputJsonArun1.json', JSON.stringify(jsonArray));
-            fs.writeFileSync('../outputdata/outputJsonArun2.json', JSON.stringify(jsonArray1));
+            // writing json in respective files
+            fs.writeFileSync('../outputdata/foodfacts.json', JSON.stringify(jsonArray));
+            fs.writeFileSync('../outputdata/foodfacts1.json', JSON.stringify(jsonArray1));
         });
 
         return 'JSON written successfully';
