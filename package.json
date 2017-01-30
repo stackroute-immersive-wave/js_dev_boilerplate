@@ -4,11 +4,7 @@
   "scripts": {
     "test": "mocha",
     "build": "gulp build",
-<<<<<<< HEAD
     "execute": "node js/foodFacts2.js"
-=======
-    "execute": "node js/chicagoCrime.js"
->>>>>>> 00ca6eb4ba5308c1574994c1ed625ca661953bd4
   },
   "author": "StackRoute",
   "license": "Apache-2.0",
@@ -29,7 +25,6 @@
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-mocha": "^3.0.1",
-    "mocha": "^3.1.2",
-    "sinon": "^1.17.7"
+    "mocha": "^3.1.2"
   }
 }
