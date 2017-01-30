@@ -3,16 +3,14 @@ expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
+convert = require("../js/Assignment.js");
 
-convert = require("../js/converting2jsonVishnu.js");
-
-
-describe("A series of test for Converting  CSV to JSON",
+describe("A series of test for Converting  CSV to JSON", 
 	function(err){
 
   it("should return sucess message", function(done){
-  	var result = convert(2001);
-  	result.should.be.equal('JSON written successfully');
+  	var result = convert(1960, 1970);;  
+  	result.should.be.equal('JSON written successfully');  	  
     done();
     });
 
@@ -32,12 +30,12 @@ describe("A series of test for Converting  CSV to JSON",
     });
 
    it('should not fail if the year is a literal number', function(done){
-        expect(convert.bind(undefined, '1960')).to.throw(Error, "Not a number");
+        expect(convert.bind(undefined, '1960', '1970')).to.throw(Error, "Not a number");
         done();
     });
 
    it('should not fail if the year is a Number object', function(done){
-        expect(convert.bind(undefined, Number(1960))).to.not.throw(Error, "Not a number");
+        expect(convert.bind(undefined, Number(1960), Number(1970))).to.not.throw(Error, "Not a number");
         done();
     });
 });
@@ -46,28 +44,29 @@ describe("A series of test for Converting  CSV to JSON",
 describe("Test createInterface method of readline", function(err){
 		it("should be called only once", function() {
             var spyCreateInterface = sinon.spy(readline, 'createInterface');
-            convert(2016);
+            convert(2001, 2005);
             readline.createInterface.restore();
             sinon.assert.calledOnce(spyCreateInterface);
-    });
+    });   
   });
     describe("Test on method of Interface for line event", function(err){
     it("should be called", function() {
            var stub = sinon.stub(readline.Interface.prototype, 'on');
-           convert(2016);
+           convert(2001, 2005);
            sinon.assert.called(stub);
            readline.Interface.prototype.on.restore();
-           sinon.assert.calledWith(stub,"line");
+           sinon.assert.calledWith(stub,"line");        
 
-    });
-   });
+    }); 
+   }); 
 
     describe("Test on method of Interface for close event", function(err){
     it("should be called", function() {
            var stub = sinon.stub(readline.Interface.prototype,'on');
-           convert(2016);
-           readline.Interface.prototype.on.restore();
+           convert(2001, 2005);    
+           readline.Interface.prototype.on.restore();        
            sinon.assert.calledWith(stub,"close");
-    });
+    });  
 
  	});
+

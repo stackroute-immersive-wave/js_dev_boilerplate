@@ -2,10 +2,8 @@ const should = require("chai").should(),
 expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
-fs=require("fs"),
-
-convert = require("../js/converting2jsonVishnu.js");
-
+fs = require("fs"),
+convert = require("../js/CrimeConvertorYuvashree");
 
 describe("A series of test for Converting  CSV to JSON",
 	function(err){
