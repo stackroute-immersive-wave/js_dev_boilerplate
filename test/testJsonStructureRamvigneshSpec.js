@@ -4,7 +4,6 @@ var jsonDiff = require('./jsondiff');
 var totalObjectKeys = require('./totalObjectKeys');
 var expectedJSON = require('./expectedjson/expectedJsonRam1.json');
 var actualJSON = require('../outputdata/outputJsonRam1.json');
-var expectedJSON = require('./expectedjson/expectedjsonRagesh.json');
 describe('Test Application as Blackbox', function(){
   it ('Test JSON is well formed', function(done){
     /*ToDO Parse JSON*/
