@@ -6,7 +6,7 @@ module.exports = {
     "es6": true
   },
 
-  
+
 
   "ecmaFeatures": {
     "arrowFunctions": true,
@@ -79,7 +79,11 @@ module.exports = {
     "consistent-return": 2, // require return statements to either always or never specify values
     "curly": 2, // specify curly brace conventions for all control statements
     "default-case": 2, // require default case in switch statements (off by default)
-    "dot-notation": 2, // encourages use of dot notation whenever possible
+
+  //  "dot-notation": 2, // encourages use of dot notation whenever possible
+
+    "dot-notation": 0, // encourages use of dot notation whenever possible
+
     "eqeqeq": 2, // require the use of === and !==
     "guard-for-in": 2, // make sure for-in loops have an if statement (off by default)
     "no-alert": 2, // disallow the use of alert, confirm, and prompt
@@ -143,7 +147,7 @@ module.exports = {
     "no-shadow-restricted-names": 2, // disallow shadowing of names such as arguments
     "no-undef": 2, // disallow use of undeclared variables unless mentioned in a /*global */ block
     "no-undef-init": 2, // disallow use of undefined when initializing variables
-    "no-undefined": 2, // disallow use of undefined variable (off by default)
+  //  "no-undefined": 0, // disallow use of undefined variable (off by default)
     "no-unused-vars": 2, // disallow declaration of variables that are not used in the code
     "no-use-before-define": 2, // disallow use of variables before they are defined
 
@@ -179,7 +183,7 @@ module.exports = {
     "no-underscore-dangle": 1, // disallow dangling underscores in identifiers
     "no-extra-parens": 1, // disallow wrapping of non-IIFE statements in parens
     "one-var": [1, "never"], // allow just one var statement per function (off by default)
-    "operator-assignment": [1, "never"], // require assignment operator shorthand where possible or prohibit it entirely (off by default)
+    //"operator-assignment": [1, "never"], // require assignment operator shorthand where possible or prohibit it entirely (off by default)
     "padded-blocks": [1, "never"], // enforce padding within blocks (off by default)
     "quote-props": [1, "as-needed"], // require quotes around object literal property names (off by default)
     "quotes": [1, "single"], // specify whether double or single quotes should be used
@@ -214,7 +218,7 @@ module.exports = {
     // the functionality is the same.
     //
     "max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
-    "max-len": [2, 100, 2], // specify the maximum length of a line in your program (off by default)
+    "max-len": [2, 150, 2], // specify the maximum length of a line in your program (off by default)
     "max-params": [2, 5], // limits the number of parameters that can be used in the function declaration. (off by default)
     "max-statements": 0, // specify the maximum number of statement allowed in a function (off by default)
     "no-bitwise": 0, // disallow use of bitwise operators (off by default)
@@ -225,6 +229,7 @@ module.exports = {
     //
     // React specific linting rules for ESLint
     //
+
     // "react/display-name": 0, // Prevent missing displayName in a React component definition
     // "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
     // "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
@@ -239,4 +244,5 @@ module.exports = {
     // "react/self-closing-comp": 2, // Prevent extra closing tags for components without children
     // "react/jsx-wrap-multilines": 2, // Prevent missing parentheses around multilines JSX
   }
+
 }

@@ -1,10 +1,11 @@
+
 {
   "name": "Data_Munging_Tool",
   "version": "1.0.0",
   "scripts": {
     "test": "mocha",
     "build": "gulp build",
-    "execute": "node js/testCodeQuality.js"
+    "execute": "node js/foodFacts2.js"
   },
   "author": "StackRoute",
   "license": "Apache-2.0",
@@ -29,3 +30,4 @@
     "mocha": "^3.1.2"
   }
 }
+
