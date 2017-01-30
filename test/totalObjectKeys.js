@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = (function() {
     var totalNoObjects = 0,
         totalNoKeys = 0;
@@ -104,3 +105,37 @@ module.exports = (function () {
   }
 })();
 >>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
+=======
+module.exports = (function () {
+    var totalNoObjects = 0, totalNoKeys = 0;
+  return {
+    traverse : traverse
+  }
+  // Traverse expected json
+  function traverse(obj) {
+        if (obj instanceof Array) {
+        totalNoObjects++;
+            obj.forEach(function (value, index) {
+            if (typeof value == "object" && value) {
+                traverse(value);
+            } else {
+              totalNoKeys++;
+            }
+          })
+      } else {
+          totalNoObjects++;
+          for (var prop in obj) {
+              if (typeof obj[prop] == "object" && obj[prop]) {
+                  traverse(obj[prop]);
+              } else {
+                totalNoKeys++;
+              }
+          }
+      }
+      return {
+        totalNoObjects : totalNoObjects,
+        totalNoKeys    : totalNoKeys
+      }
+  }
+})();
+>>>>>>> 801d5d63957283f3744099ffc8055fdfa5785fc7
