@@ -1,32 +1,32 @@
 module.exports = (function () {
-    var totalNoObjects = 0, totalNoKeys = 0;
+    let totalNoObjects = 0, totalNoKeys = 0;
   return {
-    traverse : traverse
+    traverse: traverse
   }
   // Traverse expected json
   function traverse(obj) {
         if (obj instanceof Array) {
-        totalNoObjects++;
-            obj.forEach(function (value, index) {
-            if (typeof value == "object" && value) {
+        totalNoObjects = totalNoKeys + 1;
+            obj.forEach(function (value) {
+            if (typeof value === 'object' && value) {
                 traverse(value);
             } else {
-              totalNoKeys++;
+              totalNoKeys = totalNoKeys + 1;
             }
-          })
+          });
       } else {
-          totalNoObjects++;
-          for (var prop in obj) {
-              if (typeof obj[prop] == "object" && obj[prop]) {
+          totalNoObjects = totalNoKeys + 1;
+          for (let prop in obj) {
+              if (typeof obj[prop] === 'object' && obj[prop]) {
                   traverse(obj[prop]);
               } else {
-                totalNoKeys++;
+                totalNoKeys = totalNoKeys + 1;
               }
           }
       }
       return {
-        totalNoObjects : totalNoObjects,
-        totalNoKeys    : totalNoKeys
-      }
+        totalNoObjects: totalNoObjects,
+        totalNoKeys: totalNoKeys
+      };
   }
 })();
