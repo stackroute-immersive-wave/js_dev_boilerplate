@@ -15,6 +15,7 @@ module.exports = function convertCsv(startYear) {
 		let linenumber = 0;
 		let jsonArray = [];
 		rli.on('line', (line) => {
+			/*eslint-disable*/
 			if(linenumber === 0) {
 				linenumber = linenumber + 1;
 			}
@@ -42,6 +43,7 @@ module.exports = function convertCsv(startYear) {
 					}
 				}
 			}
+			/*eslint-enable*/
 		});
 		rli.on('close', () => fs.writeFileSync('json1.json', JSON.stringify(jsonArray)));
 	};
