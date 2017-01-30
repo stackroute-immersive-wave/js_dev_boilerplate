@@ -2,20 +2,28 @@ var chai = require('chai');
 var expect = chai.expect;
 var jsonDiff = require('../test/jsondiff');
 var totalObjectKeys = require('../test/totalObjectKeys');
+<<<<<<< HEAD
 var expectedJSON = require('./ExpectedJSON/ExpectedJSONdeepika1.json');
 var actualJSON = require('../outputdata/outputJSONdeepika1.json');
 var testJSON=require('../outputdata/TestJSON.js');
+=======
+var expectedJSON = require('../test/expectedjson/expectedjsonsangee1.json');
+var actualJSON = require('../outputdata/outputJsonSangee1.json');
+>>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
 describe('Test Application as Blackbox', function(){
   it ('Test JSON is well formed', function(done){
     /*ToDO Parse JSON*/
     done();
   });
+<<<<<<< HEAD
   it('Checking The File',function(done)
   {
     var result=jsonDiff.check(testJSON);
     expect(result).equal('File Is Contains Some Value');
     done();
   });
+=======
+>>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
   it('JSON has expected Number of Objects', function(done){
     var objMatrix = totalObjectKeys.traverse(actualJSON);
     expect(objMatrix.totalNoObjects).to.not.equal(0);

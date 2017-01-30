@@ -6,19 +6,7 @@ module.exports = (function(){
       }
       return compareObjects(JSON.parse(expectedJSONStr), JSON.parse(actualJSONStr));
     },
-    check:function(obj)
-    {
-      if(obj.size!=0)
-      {
-        return "File Is Contains Some Value";
-      }
-      else {
-        {
-          return "File Is Empty";
-        }
-      }
-    },
-  compareJSONObjects:   function(expectedJSON, actualJSON) {
+    compareJSONObjects:   function(expectedJSON, actualJSON) {
       if (!expectedJSON || !actualJSON) {
         return;
       }
@@ -60,15 +48,10 @@ module.exports = (function(){
         var values = [];
         keys.forEach(function(keyName) {
           var val = obj[keyName];
-       let keys = Object.keys(obj);
-        let values = [];
-        keys.forEach(function(keyName) {
-          let val = obj[keyName];
-       values.push(val);
+          values.push(val);
         });
         return values;
       }
     }
   }
-}
 })();

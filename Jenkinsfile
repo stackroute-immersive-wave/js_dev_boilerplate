@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
 node {
   stage: 'Environment Variables'
   sh "env"
@@ -9,10 +13,20 @@ node {
   sh "npm prune"
   sh "npm install"
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
   stage 'Linting'
   sh "npm run build"
 
   stage 'Testing'
   sh "npm run test"
+<<<<<<< HEAD
  
 }
+=======
+
+}
+
+>>>>>>> 6a2af07c1b5e67519eda0beea0a3a71fde6840e6
