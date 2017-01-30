@@ -9,6 +9,10 @@
   "author": "StackRoute",
   "license": "Apache-2.0",
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "chai": "^3.5.0",
+>>>>>>> 6304e2d147324248d0009a539904732f6d42d448
     "gulp": "^3.9.1",
     "log4js": "^1.0.1",
     "sinon": "^1.17.7"
