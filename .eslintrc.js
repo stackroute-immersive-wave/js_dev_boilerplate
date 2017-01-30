@@ -172,7 +172,7 @@ module.exports = {
     "newline-after-var": 0, // allow/disallow an empty newline after var statement (off by default)
     "no-array-constructor": 1, // disallow use of the Array constructor
     "no-inline-comments": 1, // disallow comments inline after code (off by default)
-    //"no-lonely-if": 1, // disallow if as the only statement in an else block (off by default)
+    "no-lonely-if": 1, // disallow if as the only statement in an else block (off by default)
     "no-mixed-spaces-and-tabs": 1, // disallow mixed spaces and tabs for indentation
     "no-multiple-empty-lines": [1, {"max": 2}], // disallow multiple empty lines (off by default)
     "no-nested-ternary": 1, // disallow nested ternary expressions (off by default)
@@ -219,8 +219,6 @@ module.exports = {
     //
     "max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
     "max-len": [2, 150, 2], // specify the maximum length of a line in your program (off by default)
-    //"max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
-    "max-len": [2, 100, 2], // specify the maximum length of a line in your program (off by default)
     "max-params": [2, 5], // limits the number of parameters that can be used in the function declaration. (off by default)
     "max-statements": 0, // specify the maximum number of statement allowed in a function (off by default)
     "no-bitwise": 0, // disallow use of bitwise operators (off by default)
@@ -231,6 +229,7 @@ module.exports = {
     //
     // React specific linting rules for ESLint
     //
+
     // "react/display-name": 0, // Prevent missing displayName in a React component definition
     // "react/jsx-no-undef": 0, // Disallow undeclared variables in JSX
     // "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
@@ -261,5 +260,21 @@ module.exports = {
   //   "react/self-closing-comp": 2, // Prevent extra closing tags for components without children
   //   "react/jsx-wrap-multilines": 2, // Prevent missing parentheses around multilines JSX
    }
+
+
+    // "react/display-name": 0, // Prevent missing displayName in a React component definition
+    // "react/jsx-no-undef": 0, // Disallow undeclared variables in JSX
+    // "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
+    // "react/jsx-uses-react": 0, // Prevent React to be incorrectly marked as unused
+    // "react/jsx-uses-vars": 0, // Prevent variables used in JSX to be incorrectly marked as unused
+    // "react/no-did-mount-set-state": 0, // Prevent usage of setState in componentDidMount
+    // "react/no-did-update-set-state": 0, // Prevent usage of setState in componentDidUpdate
+    // "react/no-multi-comp": 0, // Prevent multiple component definition per file
+    // "react/no-unknown-property": 0, // Prevent usage of unknown DOM property
+    // "react/prop-types": 0, // Prevent missing props validation in a React component definition
+    // "react/react-in-jsx-scope": 0, // Prevent missing React when using JSX
+    // "react/self-closing-comp": 0, // Prevent extra closing tags for components without children
+    // "react/jsx-wrap-multilines": 0, // Prevent missing parentheses around multilines JSX
+  }
 
 }
