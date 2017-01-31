@@ -3,16 +3,16 @@ expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
-<<<<<<< HEAD
+
 convert = require("../js/indiaCensusConverter.js");
 
-describe("A series of test for Converting  CSV to JSON", 
+describe("A series of test for Converting  CSV to JSON",
 	function(err){
 
   it("should return sucess message", function(done){
-  	var result = convert(2001);  
-  	result.should.be.equal('JSON written successfully');  	  
-=======
+  	var result = convert(2001);
+  	result.should.be.equal('JSON written successfully');
+
 //
 // convert = require("../js/outputJsonaswini2.js");
 //
@@ -24,7 +24,7 @@ describe("A series of test for Converting  CSV to JSON",
   it("should return sucess message", function(done){
   	var result = convert(2001);
   	result.should.be.equal('JSON written successfully');
->>>>>>> 1ad10c07658e33896c8142751332a82037c7f9e1
+
     done();
     });
 
@@ -61,11 +61,11 @@ describe("Test createInterface method of readline", function(err){
             convert(2016);
             readline.createInterface.restore();
             sinon.assert.calledOnce(spyCreateInterface);
-<<<<<<< HEAD
-    });   
-=======
+
     });
->>>>>>> 1ad10c07658e33896c8142751332a82037c7f9e1
+
+    });
+
   });
     describe("Test on method of Interface for line event", function(err){
     it("should be called", function() {
@@ -73,35 +73,29 @@ describe("Test createInterface method of readline", function(err){
            convert(2016);
            sinon.assert.called(stub);
            readline.Interface.prototype.on.restore();
-<<<<<<< HEAD
-           sinon.assert.calledWith(stub,"line");        
-
-    }); 
-   }); 
-=======
            sinon.assert.calledWith(stub,"line");
 
     });
    });
->>>>>>> 1ad10c07658e33896c8142751332a82037c7f9e1
+           sinon.assert.calledWith(stub,"line");
+
+    });
+   });
 
     describe("Test on method of Interface for close event", function(err){
     it("should be called", function() {
            var stub = sinon.stub(readline.Interface.prototype,'on');
-<<<<<<< HEAD
-           convert(2016);    
-           readline.Interface.prototype.on.restore();        
-           sinon.assert.calledWith(stub,"close");
-    });  
-
- 	});
-
-
-=======
            convert(2016);
            readline.Interface.prototype.on.restore();
            sinon.assert.calledWith(stub,"close");
     });
 
  	});
->>>>>>> 1ad10c07658e33896c8142751332a82037c7f9e1
+
+
+           convert(2016);
+           readline.Interface.prototype.on.restore();
+           sinon.assert.calledWith(stub,"close");
+    });
+
+ 	});
