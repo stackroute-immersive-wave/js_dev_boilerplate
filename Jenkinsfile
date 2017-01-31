@@ -1,4 +1,3 @@
-
 node {
   stage: 'Environment Variables'
   sh "env"
@@ -9,8 +8,6 @@ node {
   stage 'Installing Dependencies'
   sh "npm prune"
   sh "npm install"
-
-
 
   stage 'Linting'
   sh "npm run build"
