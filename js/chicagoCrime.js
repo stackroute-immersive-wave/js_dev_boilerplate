@@ -8,7 +8,7 @@ const fs = require('fs');
 let readfile = fs.createReadStream('crimedata.csv', 'utf-8');
 let data = '';
 readfile.on('data', function(chunk) {
-	data += chunk;
+	data = data + chunk;
 });
 readfile.on('end', function() {
 	let StringData = data.toString();
@@ -29,7 +29,7 @@ readfile.on('end', function() {
 		year = viewline[yearindex];
 		description = viewline[dindex];
 		if(PrimaryType === 'THEFT' && description === 'OVER $500' || description === '$500 AND UNDER') {
-			if(year !== undefined && year > 2001) {
+			if(year !== null && year > 2001) {
 				let obj = {};
 				obj['PrimaryType'] = PrimaryType;
 				obj['Description'] = description;
