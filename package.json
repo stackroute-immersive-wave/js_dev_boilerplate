@@ -7,8 +7,6 @@
     "build": "gulp build",
 
     "execute": "node js/ageconverter"
-
-    "execute": "node js/foodFacts2.js"
   },
   "author": "StackRoute",
   "license": "Apache-2.0",
