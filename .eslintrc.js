@@ -79,7 +79,7 @@ module.exports = {
     "consistent-return": 2, // require return statements to either always or never specify values
     "curly": 2, // specify curly brace conventions for all control statements
     "default-case": 2, // require default case in switch statements (off by default)
-    "dot-notation": 2, // encourages use of dot notation whenever possible
+    // "dot-notation": 0, // encourages use of dot notation whenever possible
     "eqeqeq": 2, // require the use of === and !==
     "guard-for-in": 2, // make sure for-in loops have an if statement (off by default)
     "no-alert": 2, // disallow the use of alert, confirm, and prompt
@@ -213,7 +213,7 @@ module.exports = {
     // While the names of the rules may not match up with the JSHint/JSLint counterpart,
     // the functionality is the same.
     //
-    "max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
+    //"max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
     "max-len": [2, 100, 2], // specify the maximum length of a line in your program (off by default)
     "max-params": [2, 5], // limits the number of parameters that can be used in the function declaration. (off by default)
     "max-statements": 0, // specify the maximum number of statement allowed in a function (off by default)
