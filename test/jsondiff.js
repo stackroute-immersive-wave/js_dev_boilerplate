@@ -6,18 +6,6 @@ module.exports = (function(){
       }
       return compareObjects(JSON.parse(expectedJSONStr), JSON.parse(actualJSONStr));
     },
-    check:function(obj)
-    {
-      if(obj.size!=0)
-      {
-        return "File Is Contains Some Value";
-      }
-      else {
-        {
-          return "File Is Empty";
-        }
-      }
-    },
     compareJSONObjects:   function(expectedJSON, actualJSON) {
       if (!expectedJSON || !actualJSON) {
         return;
@@ -66,9 +54,4 @@ module.exports = (function(){
       }
     }
   }
-<<<<<<< HEAD
 })();
-=======
-
-})();
->>>>>>> 6dd1f9960621e761bcd14ab24842368e096cc5ab

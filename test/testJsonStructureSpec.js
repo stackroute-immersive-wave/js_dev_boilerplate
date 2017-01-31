@@ -1,5 +1,3 @@
-<<<<<<< HEAD:test/testJsonStructureSpec.js
-=======
 
 
 var chai = require('chai');
@@ -30,31 +28,25 @@ describe('Test Application as Blackbox', function(){
 
 
 
->>>>>>> 6dd1f9960621e761bcd14ab24842368e096cc5ab:test/testJsonStructureAswiniSpec.js
 var chai = require('chai');
 var expect = chai.expect;
 
 var jsonDiff = require('./jsondiff');
 var totalObjectKeys = require('./totalObjectKeys');
-<<<<<<< HEAD:test/testJsonStructureSpec.js
+
 var expectedJSON = require('./expectedjson/expectedJsonNavin1.json');
 var actualJSON = require('../outputdata/OutputJSONNavin1.json');
 
-=======
+
 var expectedJSON = require('./expectedjson/expectedJsonaswini2.json');
 var actualJSON = require('../outputdata/outputJsonpart1Aswinik.json');
->>>>>>> 6dd1f9960621e761bcd14ab24842368e096cc5ab:test/testJsonStructureAswiniSpec.js
+
 describe('Test Application as Blackbox', function(){
 
   it('Test JSON is well formed', function(done){
 
     done();
   });
-<<<<<<< HEAD:test/testJsonStructureSpec.js
-
-=======
-
->>>>>>> 6dd1f9960621e761bcd14ab24842368e096cc5ab:test/testJsonStructureAswiniSpec.js
   it('JSON has expected Number of Objects', function(done){
     var objMatrix = totalObjectKeys.traverse(actualJSON);
     expect(objMatrix.totalNoObjects).to.not.equal(0);
