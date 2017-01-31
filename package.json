@@ -4,23 +4,19 @@
   "scripts": {
     "test": "mocha",
     "build": "gulp build",
-<<<<<<< HEAD
-    "execute": "node js/foodFacts2.js"
-=======
+    "execute": "node js/foodFacts2.js",
     "execute": "node js/ageconverter"
->>>>>>> f2e4236222d9f05cd2bf579cf4773ff78af7e3fe
   },
   "author": "StackRoute",
   "license": "Apache-2.0",
   "dependencies": {
     "chai": "^3.5.0",
-<<<<<<< HEAD
+
     "eslint": "^3.14.1",
     "gulp": "^3.9.1",
-=======
+
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
->>>>>>> f2e4236222d9f05cd2bf579cf4773ff78af7e3fe
     "log4js": "^1.0.1",
     "sinon": "^1.17.7"
   },
