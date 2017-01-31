@@ -96,6 +96,4 @@ describe("Test createInterface method of readline", function(err){
            convert(2016);
            readline.Interface.prototype.on.restore();
            sinon.assert.calledWith(stub,"close");
-    );
-
- 	});
+    });
