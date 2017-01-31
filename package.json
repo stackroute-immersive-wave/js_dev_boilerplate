@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 
-=======
-
->>>>>>> 1ad10c07658e33896c8142751332a82037c7f9e1
 {
   "name": "Data_Munging_Tool",
   "version": "1.0.0",
   "scripts": {
     "test": "mocha",
     "build": "gulp build",
-<<<<<<< HEAD
+
     "execute": "node js/ageconverter"
 
     "execute": "node js/foodFacts2.js"
@@ -19,7 +15,7 @@
   "dependencies": {
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
-=======
+
 "execute": "node js/testCodeQuality.js"
 },
   "author": "StackRoute",
@@ -27,7 +23,7 @@
   "dependencies": {
  "chai": "^3.5.0",
 "gulp": "^3.9.1",
->>>>>>> 1ad10c07658e33896c8142751332a82037c7f9e1
+
     "log4js": "^1.0.1",
     "sinon": "^1.17.7"
   },
