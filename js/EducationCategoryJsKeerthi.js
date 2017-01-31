@@ -1,9 +1,20 @@
+let check = function(age) {
+ if(!age) {
+   throw Error('Not a number');
+ }
+ if(typeof age !== 'number') {
+     throw Error('Not a number');
+ }
+ else {
 let fs = require('fs');
-let readline = require('readline');
-let Stream = require('stream');
+// let readline = require('readline');
+// let Stream = require('stream');
 let instream = fs.createReadStream('../inputdata/India2011_Merge_csv.csv');
-let Outstream = new Stream();
-let rl = readline.createInterface(instream, Outstream);
+// let Outstream = new Stream();
+let rl = require('readline').createInterface({
+  input: instream,
+  terminal: false
+});
 let arr = [];
 let Literate = 0;
 let LiterateWithoutEducation = 0;
@@ -55,3 +66,7 @@ rl.on('close', function() {
     });
       fs.writeFile('../outputdata/education_category_json.json', JSON.stringify(arr, null, 2));
 });
+}
+return 'JSON written successfully';
+};
+module.exports = check;

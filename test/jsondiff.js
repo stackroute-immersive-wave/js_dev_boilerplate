@@ -54,8 +54,5 @@ module.exports = (function(){
       }
     }
   }
-<<<<<<< HEAD
+
 })();
-=======
-})();
->>>>>>> 8beaed2d2b01076a5e69852e788e031d5d2ec80b

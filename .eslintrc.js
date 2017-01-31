@@ -6,8 +6,6 @@ module.exports = {
     "es6": true
   },
 
-
-
   "ecmaFeatures": {
     "arrowFunctions": true,
     "binaryLiterals": true,
@@ -102,7 +100,7 @@ module.exports = {
     "no-implied-eval": 2, // disallow use of eval()-like methods
     "no-iterator": 2, // disallow usage of __iterator__ property
     "no-labels": 2, // disallow use of labeled statements
-    "no-lone-blocks": 2, // disallow unnecessary nested blocks
+    // "no-lone-blocks": 2, // disallow unnecessary nested blocks
     "no-loop-func": 2, // disallow creation of functions within loops
     "no-multi-spaces": 2, // disallow use of multiple spaces
     "no-multi-str": 2, // disallow use of multiline strings
@@ -226,7 +224,7 @@ module.exports = {
     // While the names of the rules may not match up with the JSHint/JSLint counterpart,
     // the functionality is the same.
     //
-    "max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
+  //  "max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
 
     "max-len": [2, 100, 2], // specify the maximum length of a line in your program (off by default)
 
@@ -242,20 +240,20 @@ module.exports = {
     // React specific linting rules for ESLint
 
     //
-    "react/display-name": 0, // Prevent missing displayName in a React component definition
-    "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
-    "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
-    "react/jsx-uses-react": 2, // Prevent React to be incorrectly marked as unused
-    "react/jsx-uses-vars": 2, // Prevent variables used in JSX to be incorrectly marked as unused
-    "react/no-did-mount-set-state": 2, // Prevent usage of setState in componentDidMount
-    "react/no-did-update-set-state": 2, // Prevent usage of setState in componentDidUpdate
-    "react/no-multi-comp": 0, // Prevent multiple component definition per file
-    "react/no-unknown-property": 2, // Prevent usage of unknown DOM property
-    "react/prop-types": 2, // Prevent missing props validation in a React component definition
-    "react/react-in-jsx-scope": 2, // Prevent missing React when using JSX
-    "react/self-closing-comp": 2, // Prevent extra closing tags for components without children
-    "react/jsx-wrap-multilines": 2, // Prevent missing parentheses around multilines JSX
-  }
+  //   "react/display-name": 0, // Prevent missing displayName in a React component definition
+  //   "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
+  //   "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
+  //   "react/jsx-uses-react": 2, // Prevent React to be incorrectly marked as unused
+  //   "react/jsx-uses-vars": 2, // Prevent variables used in JSX to be incorrectly marked as unused
+  //   "react/no-did-mount-set-state": 2, // Prevent usage of setState in componentDidMount
+  //   "react/no-did-update-set-state": 2, // Prevent usage of setState in componentDidUpdate
+  //   "react/no-multi-comp": 0, // Prevent multiple component definition per file
+  //   "react/no-unknown-property": 2, // Prevent usage of unknown DOM property
+  //   "react/prop-types": 2, // Prevent missing props validation in a React component definition
+  //   "react/react-in-jsx-scope": 2, // Prevent missing React when using JSX
+  //   "react/self-closing-comp": 2, // Prevent extra closing tags for components without children
+  //   "react/jsx-wrap-multilines": 2, // Prevent missing parentheses around multilines JSX
+  // }
 
     //5fcbfe6a7e845379b387a6553ddb2b
     // "react/display-name": 0, // Prevent missing displayName in a React component definition
@@ -272,5 +270,4 @@ module.exports = {
     // "react/self-closing-comp": 2, // Prevent extra closing tags for components without children
     // "react/jsx-wrap-multilines": 2, // Prevent missing parentheses around multilines JSX
   }
-
 }
