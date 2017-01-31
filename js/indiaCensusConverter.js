@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 module.exports = function convertcsv(startYear)
 {
   if(typeof startYear !== 'number' || isNaN(startYear))
@@ -61,7 +61,7 @@ rli.on('close', () => fs.writeFileSync('../outputdata/newdata.json', JSON.string
 };
 convertWithStream1();
 return 'JSON written successfully';
-=======
+
 module.exports = function convertCsv(startYear) {
     if (typeof startYear !== 'number' || isNaN(startYear)) {
         throw new Error('Not a number');
@@ -179,5 +179,5 @@ module.exports = function convertcsv(startYear) {
     };
     convertWithStream1();
     return 'JSON written successfully';
->>>>>>> 1ad10c07658e33896c8142751332a82037c7f9e1
+
 };
