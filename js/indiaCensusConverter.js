@@ -61,7 +61,7 @@ rli.on('close', () => fs.writeFileSync('../outputdata/newdata.json', JSON.string
 };
 convertWithStream1();
 return 'JSON written successfully';
-
+};
 module.exports = function convertCsv(startYear) {
     if (typeof startYear !== 'number' || isNaN(startYear)) {
         throw new Error('Not a number');
@@ -88,7 +88,7 @@ module.exports = function convertCsv(startYear) {
                     for (let json of jsonArray) {
                         if (json.AgeGroup === values[5] && values[5] !== 'All ages' &&
                             values[4] === 'Total') {
-                            json.LiteratePopulation = Number(json.LiteratePopulation) + Number(values[12]);
+    json.LiteratePopulation = Number(json.LiteratePopulation) + Number(values[12]);
                             agegroupFound = true;
                             break;
                         } else {
@@ -175,9 +175,8 @@ module.exports = function convertcsv(startYear) {
             }
             /*eslint-enable */
         });
-        rli.on('close', () => fs.writeFileSync('../outputdata/newdata.json', JSON.stringify(jsonArray)));
+rli.on('close', () => fs.writeFileSync('../outputdata/newdata.json', JSON.stringify(jsonArray)));
     };
     convertWithStream1();
     return 'JSON written successfully';
-
-};
+    };
