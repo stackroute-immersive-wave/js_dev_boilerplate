@@ -1,22 +1,22 @@
 module.exports = (function(){
   return {
-    compareJSONStrings: function(expectedJSONStr, actualJSONStr) {
-      if (!expectedJSON || !actualJSON) {
+    compareJSONStrings: function(ExpectedJSONStr, actualJSONStr) {
+      if (!ExpectedJSON || !actualJSON) {
         return;
       }
-      return compareObjects(JSON.parse(expectedJSONStr), JSON.parse(actualJSONStr));
+      return compareObjects(JSON.parse(ExpectedJSONStr), JSON.parse(actualJSONStr));
     },
-    compareJSONObjects:   function(expectedJSON, actualJSON) {
-      if (!expectedJSON || !actualJSON) {
+    compareJSONObjects:   function(ExpectedJSON, actualJSON) {
+      if (!ExpectedJSON || !actualJSON) {
         return;
       }
-      var expectedDataSet = new Set(toDataMap(expectedJSON));
+      var ExpectedDataSet = new Set(toDataMap(ExpectedJSON));
       var actualJSONObjs = actualJSON;
       var diffs = [];
       var matched = [];
       actualJSONObjs.forEach(function(obj) {
         var actual = toObjValueHash(obj);
-        if (expectedDataSet.has(actual)) {
+        if (ExpectedDataSet.has(actual)) {
           matched.push(obj);
         } else {
           diffs.push(obj);
