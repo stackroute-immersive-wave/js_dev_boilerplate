@@ -3,14 +3,14 @@ expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
-convert = require("../js/Birth_DeathRate");
+convert = require("../js/IndicatorConverteraswini3.js");
 
 describe("A series of test for Converting  CSV to JSON",
 	function(err){
 
   it("should return sucess message", function(done){
   	var result = convert(2001);
-  	result.should.be.equal('JSON written successfully');
+  	result.should.be.equal('JSON written Successfully');
     done();
     });
 
@@ -30,7 +30,7 @@ describe("A series of test for Converting  CSV to JSON",
     });
 
    it('should not fail if the year is a literal number', function(done){
-        expect(convert.bind(undefined, '1960')).to.not.throw(Error, "Not a number");
+        expect(convert.bind(undefined, '1960')).to.throw(Error, "Not a number");
         done();
     });
 
