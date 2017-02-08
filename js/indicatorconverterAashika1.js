@@ -16,12 +16,12 @@ let lineReader = readLine.createInterface({
 	});
 	let jsonArray = [];
 	let heading = [];
-	let row = 0;
+	let rows = 0;
 	let count = 0;
 	lineReader.on('line', function (line) {
-		if(row === 0) {
+		if(rows === 0) {
 			heading = line.split(',');
-			row = row + 1;
+			rows = rows + 1;
 		}
 		else {
 			let jsonObj = {};
