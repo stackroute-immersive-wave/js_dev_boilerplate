@@ -23,11 +23,9 @@ Install gulp globally
 
 To test the app
 
-	$ npm run build
+	$ npm test
 
-To run the app
 
-	$ npm run execute
 
 ### Package structure
 
@@ -38,7 +36,7 @@ js_dev_boilerplate
 	/js --Cadet puts their data munging assignments here with  their name appended to file name
 	/outputdata --Students add the generated JSON here with  their name appended to file name
 	/test --I added few tests here and students added their own
-		/dataMungingSpec.js  --Tests to check proper API use
-		/testJsonStructureSpec.js (Uses totalObjectKeys.js and jsondiff.js of Hobbes)
+		/dataMungingSpec.js  --Tests to check proper Node.js API use
+		/testJsonStructureSpec.js (Uses totalObjectKeys.js and jsondiff.js of Hobbes) Test to check total objects and key structures against expected JSON
 		/*.js Added by student
 		/ExpectedJSON -- JSON files expected to be generated
