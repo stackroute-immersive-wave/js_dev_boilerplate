@@ -12,7 +12,7 @@ node {
   stage 'Linting'
   sh "npm run build"
 
-  stage 'Testing'
-  sh "npm run test"
+  //stage 'Testing'
+  //sh "npm run test"
 
 }
