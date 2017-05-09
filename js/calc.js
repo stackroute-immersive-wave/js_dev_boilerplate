@@ -1,3 +1,4 @@
+/*eslint-disable*/
 module.exports = function add(num1, num2){
 	return num1+num2;
 }
