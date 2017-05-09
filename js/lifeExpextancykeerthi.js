@@ -1,3 +1,4 @@
+/*eslint-disable*/
 const readline = require('readline');
 const fs = require('fs');
 var data_1=[];
@@ -18,13 +19,13 @@ module.exports = function convert(startYear)
 	if(typeof startYear !== 'number' || isNaN(startYear)) {
         	throw new Error('Not a number');
 	 }
-	 
+
 const rl = readline.createInterface({
   input: fs.createReadStream('../inputdata/Indicators(1).csv')
 });
 
 rl.on('line', (line) => {
- 
+
 
  data_1=line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
 
@@ -61,4 +62,4 @@ rl.on('close', (line) => {
  console.log(JSON.stringify(result,null,1));
 });
  return "JSON written successfully";
-} 
+}
