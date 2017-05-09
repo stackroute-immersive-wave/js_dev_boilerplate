@@ -1,3 +1,4 @@
+
  const should = require("chai").should(),
  expect = require("chai").expect,
  sinon = require('sinon'),
@@ -20,9 +21,12 @@ convert = require("../js/indiaCensusCharu");
     });
 
    it('should fail if year is not a number', function(done){
+
+
         expect(convert.bind(undefined, {})).to.throw(Error, "Not a number");
         done();
     });
+
 
     it('should fail if year is NaN', function(done){
        expect(convert.bind(undefined, NaN)).to.throw(Error, "Not a number");
@@ -67,3 +71,6 @@ convert = require("../js/indiaCensusCharu");
      });
 
   	});
+
+
+
