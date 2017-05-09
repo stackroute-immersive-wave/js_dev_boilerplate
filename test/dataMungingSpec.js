@@ -3,7 +3,11 @@ expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
+
 convert = require("../js/gDP.js");
+
+convert = require("../js/foodFactsJaswanth.js");
+
 //convert = require("../js/");
 
 describe("A series of test for Converting  CSV to JSON",
@@ -11,6 +15,9 @@ describe("A series of test for Converting  CSV to JSON",
 
   it("should return sucess message", function(done){
   	var result = convert(2013);
+
+  	var result = convert(2001);
+
   	result.should.be.equal('JSON written successfully');
     done();
     });
