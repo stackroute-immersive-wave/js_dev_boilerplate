@@ -14,7 +14,7 @@ describe("A series of test for Converting  CSV to JSON",
     done();
     });
 
-   it('should fail if year is notprovided', function(done){
+   it('should fail if year is not provided', function(done){
         expect(convert).to.throw(Error, "Not a number");
         done();
     });
@@ -67,5 +67,7 @@ describe("Test createInterface method of readline", function(err){
            readline.Interface.prototype.on.restore();
            sinon.assert.calledWith(stub,"close");
     });
+
+
 
  	});
