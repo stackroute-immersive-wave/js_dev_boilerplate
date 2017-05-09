@@ -70,40 +70,5 @@ describe("Test on method of Interface for close event", function(err){
    sinon.assert.calledWith(stub,"close");
  });
 
-<<<<<<< HEAD
-   it('should not fail if the year is a Number object', function(done){
-        expect(convert.bind(undefined, Number(1960))).to.not.throw(Error, "Not a number");
-        done();
-    });
 
-   describe("Test createInterface method of readline", function(err){
-        it("should be called only once", function() {
-           var spyCreateInterface = sinon.spy(readline, 'createInterface');
-           convert(2016);
-           readline.createInterface.restore();
-           sinon.assert.calledOnce(spyCreateInterface);
-   });
- });
-   describe("Test on method of Interface for line event", function(err){
-   it("should be called", function() {
-          var stub = sinon.stub(readline.Interface.prototype, 'on');
-          convert(2016);
-          sinon.assert.called(stub);
-          readline.Interface.prototype.on.restore();
-          sinon.assert.calledWith(stub,"line");
-
-  });
-  });
-
-  describe("Test on method of Interface for close event", function(err){
-   it("should be called", function() {
-          var stub = sinon.stub(readline.Interface.prototype,'on');
-          convert(2016);
-          readline.Interface.prototype.on.restore();
-          sinon.assert.calledWith(stub,"close");
-   });
-
-   });
-=======
->>>>>>> 2174c30c81a0c86c44d24535f078f77a70c4f792
 });
