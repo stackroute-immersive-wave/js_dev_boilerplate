@@ -7,7 +7,7 @@
     }
   }, {
     "type": "dateFile",
-    "filename": "app.log",
+    "filename": "log/app.log",
     "pattern": "-yyyy-MM-dd",
     "layout": {
       "type": "pattern",
