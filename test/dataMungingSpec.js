@@ -5,10 +5,15 @@ readline = require("readline"),
 fs=require("fs"),
 
 
+<<<<<<< HEAD
 convert=require("../js/gDPsanthoshs.js");
 
 
 
+=======
+
+convert=require("../js/foodFactsJaswanth");
+>>>>>>> 48ae91839a232afe538ee8690f919bf1e7c97e04
 
 
 describe("A series of test for Converting  CSV to JSON",
@@ -79,9 +84,7 @@ describe("Test createInterface method of readline", function(err){
           sinon.assert.calledWith(stub,"close");
    });
 
-
    });
-
 
 
 
