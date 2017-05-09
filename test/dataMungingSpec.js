@@ -3,8 +3,7 @@ expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
-<<<<<<< HEAD
-convert=require("..js/indiaCensusPradheep.js")
+convert=require("..js/indiaCensusPradheep");
 
 describe("A series of test for Converting  CSV to JSON",
 	function(err){
