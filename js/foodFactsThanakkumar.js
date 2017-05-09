@@ -1,6 +1,5 @@
-/*eslint-disable*/
-let fs = require('fs');
 const readline = require('readline');
+const fs = require('fs');
 module.exports = function convert(startYear)
  { if(typeof startYear === 'string') {
    return '';
