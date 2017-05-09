@@ -27,7 +27,7 @@ describe("A series of test for Converting  CSV to JSON",
         done();
     });
 
-  it('should fail if year is NaN', function(done){}
+  it('should fail if year is NaN', function(done){
         expect(convert.bind(undefined, NaN)).to.throw(Error, "Not a number");
         done();
     });
@@ -41,7 +41,7 @@ describe("A series of test for Converting  CSV to JSON",
         expect(convert.bind(undefined, Number(1960))).to.not.throw(Error, "Not a number");
         done();
     });
-
+});
    describe("Test createInterface method of readline", function(err){
         it("should be called only once", function() {
            var spyCreateInterface = sinon.spy(readline, 'createInterface');
@@ -68,5 +68,4 @@ describe("A series of test for Converting  CSV to JSON",
           readline.Interface.prototype.on.restore();
           sinon.assert.calledWith(stub,"close");
    });
-
  });
