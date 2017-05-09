@@ -8,5 +8,4 @@ describe("Test add method of calc", function(){
            var result = add(5,10);
   	       result.should.be.equal(15);
     });
-		});
-
+  });
