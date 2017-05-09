@@ -2,7 +2,7 @@
   "name": "Data_Munging_Tool",
   "version": "1.0.0",
   "scripts": {
-    "test": "mocha test/dataMungingSpec.js",
+    "test": "mocha",
     "build": "gulp build",
     "execute": "node js/IndiaCensusAmardeep.js",
     "execute": "node js/ageconverter"
