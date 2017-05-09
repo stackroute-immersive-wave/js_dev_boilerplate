@@ -9,8 +9,8 @@ describe('Test Application as Blackbox', function(){
     done();
   });
   it('JSON has expected Number of Objects', function(done){
-       var expectedObjMatrix = totalObjectKeys.traverse(expectedJSON);
-       var actualObjMatrix = totalObjectKeys.traverse(actualJSON);
+   var expectedObjMatrix = totalObjectKeys.traverse(expectedJSON);
+   var actualObjMatrix = totalObjectKeys.traverse(actualJSON);
     //To DO
     //expect(actualObjMatrix.totalNoObjects).to.equal(expectedObjMatrix.totalNoObjects);
     //expect(actualObjMatrix.totalNoKeys).to.equal(expectedObjMatrix.totalNoKeys);
