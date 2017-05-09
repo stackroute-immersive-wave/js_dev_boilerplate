@@ -4,12 +4,9 @@ sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
 
-<<<<<<< HEAD
-convert = require("../js/worlddevurbanizationPavan.js");
-=======
-convert=require("../js/indiaCensusPradheep");
 
->>>>>>> c90103d8708dfd5c791a8ecb6bb7560f9fa89a1c
+convert = require("../js/worlddevurbanizationPavan.js");
+
 
 describe("A series of test for Converting  CSV to JSON",
   function(err){
@@ -113,6 +110,3 @@ describe("Test createInterface method of readline", function(err){
 
 });
 
-=======
-});
->>>>>>> c90103d8708dfd5c791a8ecb6bb7560f9fa89a1c
