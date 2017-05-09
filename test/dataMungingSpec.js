@@ -4,14 +4,14 @@ sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
 
-convert = require("../js/indiaCensusPriyanka");
+convert = require("../js/indiaCensusAmardeep");
 
 
 describe("A series of test for Converting  CSV to JSON",
   function(err){
 
     it("should return sucess message", function(done){
-     var result = convert(2011);
+     let result = convert(2011);
      result.should.be.equal('JSON written successfully');
      done();
    });
@@ -46,15 +46,16 @@ describe("A series of test for Converting  CSV to JSON",
 
 describe("Test createInterface method of readline", function(err){
   it("should be called only once", function() {
-    var spyCreateInterface = sinon.spy(readline, 'createInterface');
+    let spyCreateInterface = sinon.spy(readline, 'createInterface');
     convert(2016);
     readline.createInterface.restore();
     sinon.assert.calledOnce(spyCreateInterface);
   });
 });
+
 describe("Test on method of Interface for line event", function(err){
   it("should be called", function() {
-   var stub = sinon.stub(readline.Interface.prototype, 'on');
+   let stub = sinon.stub(readline.Interface.prototype, 'on');
    convert(2016);
    sinon.assert.called(stub);
    readline.Interface.prototype.on.restore();
@@ -65,7 +66,7 @@ describe("Test on method of Interface for line event", function(err){
 
 describe("Test on method of Interface for close event", function(err){
   it("should be called", function() {
-   var stub = sinon.stub(readline.Interface.prototype,'on');
+   let stub = sinon.stub(readline.Interface.prototype,'on');
    convert(2016);
    readline.Interface.prototype.on.restore();
    sinon.assert.calledWith(stub,"close");
