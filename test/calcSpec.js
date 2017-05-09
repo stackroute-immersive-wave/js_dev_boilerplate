@@ -12,5 +12,3 @@ describe("Test add method of calc", function(){
   });
 
 
-  
-

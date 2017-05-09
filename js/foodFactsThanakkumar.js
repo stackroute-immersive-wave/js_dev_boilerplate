@@ -1,65 +1,61 @@
 /*eslint-disable*/
-var fs=require('fs');
+let fs = require('fs');
 const readline = require('readline');
 module.exports = function convert(startYear)
-{if(typeof startYear=='string'){
-   return "";
+ { if(typeof startYear === 'string') {
+   return '';
  }
   if(typeof startYear !== 'number' || isNaN(startYear))
  {
        throw new Error('Not a number');
  }
-const ln=readline.createInterface({
+const ln = readline.createInterface({
  input: fs.createReadStream('../inputdata/FoodFacts.csv')
 });
 
-var country = ['Netherlands', 'Canada', 'United Kingdom' , 'United States' , 'Australia' , 'France' , 'Germany' , 'Spain', 'South Africa'];
-var data=[],final_c=[];
-var sugarindex=0,saltindex=0,countryindex=0,countryv = 0,sugar = 0,salt = 0,i=0;
-
-var sugarv = Array(9).fill(0);
-var saltv = Array(9).fill(0);
-console.log("hi");
-ln.on('line', function (line) {
-data=line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
- 
-
-while(i<1) 
-  {
-    countryindex=data.indexOf('countries_en');
-    sugarindex=data.indexOf('sugars_100g');
-    saltindex=data.indexOf('salt_100g');
-    i++;
+let country = ['Netherlands', 'Canada', 'United Kingdom', 'United States',
+ 'Australia', 'France', 'Germany', 'Spain', 'South Africa'];
+let data = [];
+let finalC = [];
+let sugarindex = 0;
+let saltindex = 0;
+let countryindex = 0;
+let countryv = 0;
+let sugar = 0;
+let salt = 0;
+let i = 0;
+let sugarv = Array(9).fill(0);
+let saltv = Array(9).fill(0);
+ln.on('line', function(line) {
+data = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+while(i < 1) {
+    countryindex = data.indexOf('countries_en');
+    sugarindex = data.indexOf('sugars_100g');
+    saltindex = data.indexOf('salt_100g');
+    i = 1;
   }
 
-countryv=data[countryindex];
+countryv = data[countryindex];
 
-sugar=data[sugarindex];
-salt=data[saltindex];
-   if(salt=="") salt=0;
-     if(sugar=="") sugar=0;
- 
+sugar = data[sugarindex];
+salt = data[saltindex];
+   if (salt === '') {salt = 0;}
+     if (sugar === '') {sugar = 0;}
 
-var index=country.indexOf(countryv);
-     if(index!=-1)
-     {
-      sugarv[index]+=parseFloat(sugar);
-      saltv[index]+=parseFloat(salt);
-    }
+let index = country.indexOf(countryv);
+     if(index !== -1) {
+    sugarv[index] = sugarv[index] + parseFloat(sugar);
+      saltv[index] = saltv[index] + parseFloat(salt);}
 });
 
 ln.on('close', function() {
-  for(var h=0;h<country.length;h++) {
-    final_c.push({Country:country[h],
-    Sugar:sugarv[h],
-    Salt:saltv[h]
+  for(let h = 0; h < country.length; h = h + 1) {
+    finalC.push({Country: country[h],
+    Sugar: sugarv[h],
+    Salt: saltv[h]
   });
-   
-}    
-
-console.log(final_c);
-fs.writeFile('output.json', JSON.stringify(final_c));    
-
-});
-return "JSON written successfully";
 }
+fs.writeFile('output.json', JSON.stringify(finalC));
+});
+return 'JSON written successfully';
+};

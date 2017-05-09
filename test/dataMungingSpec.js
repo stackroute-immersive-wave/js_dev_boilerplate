@@ -3,8 +3,7 @@ expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
-
-convert = require("../js/lifeExpectancyMeghna.js");
+convert = require("../js/lifeExpectancyMeghna");
 
 describe("A series of test for Converting  CSV to JSON",
 	 function(err){
@@ -70,3 +69,8 @@ describe("Test createInterface method of readline", function(err){
 	 });
 
 	 });
+
+ 	});
+
+
+
