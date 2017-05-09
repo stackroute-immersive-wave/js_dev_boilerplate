@@ -5,10 +5,14 @@ readline = require("readline"),
 fs=require("fs"),
 
 
+
 convert = require("../js/foodFactsSripriya");
 
 
  describe("A series of test for Converting  CSV to JSON",
+
+describe("A series of test for Converting  CSV to JSON",
+
 	function(err){
 
   it("should return sucess message", function(done){
@@ -29,7 +33,6 @@ it('should fail if year is not a number', function(done){
    });
 
 
-
    it('should fail if year is NaN', function(done){
         expect(convert.bind(undefined, NaN)).to.throw(Error, "Not a number");
         done();
@@ -39,10 +42,12 @@ it('should fail if year is not a number', function(done){
         expect(convert.bind(undefined, '1960')).to.not.throw(Error, "Not a number");
         done();
     });
+
    it('should not fail if the year is a Number object', function(done){
         expect(convert.bind(undefined, Number(1960))).to.not.throw(Error, "Not a number");
         done();
     });
+
  });
 describe("Test createInterface method of readline", function(err){
        it("should be called only once", function() {
@@ -76,3 +81,6 @@ describe("Test createInterface method of readline", function(err){
 
    });
 
+=======
+});
+>>>>>>> bdd200b3114106bf89b7aaca3115ae6b73dde80e
