@@ -12,8 +12,6 @@ let convert=function(year){
 		throw new Error('Not a number');
 	}
 
-
-	
 	let final=[];
 	let count=0;
 
@@ -51,6 +49,6 @@ let convert=function(year){
 
 }
 
-convert(2011);
+// convert(2011);
 
 module.exports=convert;
