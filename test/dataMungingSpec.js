@@ -32,7 +32,7 @@ function(err){
     it('should not fail if the year is a literal number', function(done){
          expect(convert.bind(undefined, '1960')).to.not.throw(Error, "Not a number");
          done();
-     });
+//     });
 
     it('should not fail if the year is a Number object', function(done){
          expect(convert.bind(undefined, Number(1960))).to.not.throw(Error, "Not a number");
