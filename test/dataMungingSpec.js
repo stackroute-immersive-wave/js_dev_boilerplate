@@ -1,8 +1,10 @@
+
 const should = require("chai").should(),
 expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
+
 convert = require("../js/sample");
 
 describe("A series of test for Converting  CSV to JSON",
@@ -41,31 +43,31 @@ describe("A series of test for Converting  CSV to JSON",
 });
 
 
-describe("Test createInterface method of readline", function(err){
-		it("should be called only once", function() {
-            var spyCreateInterface = sinon.spy(readline, 'createInterface');
-            convert(2016);
-            readline.createInterface.restore();
-            sinon.assert.calledOnce(spyCreateInterface);
-    });
-  });
-    describe("Test on method of Interface for line event", function(err){
-    it("should be called", function() {
-           var stub = sinon.stub(readline.Interface.prototype, 'on');
+   describe("Test createInterface method of readline", function(err){
+        it("should be called only once", function() {
+           var spyCreateInterface = sinon.spy(readline, 'createInterface');
            convert(2016);
-           sinon.assert.called(stub);
-           readline.Interface.prototype.on.restore();
-           sinon.assert.calledWith(stub,"line");
+           readline.createInterface.restore();
+           sinon.assert.calledOnce(spyCreateInterface);
+   });
+ });
+   describe("Test on method of Interface for line event", function(err){
+   it("should be called", function() {
+          var stub = sinon.stub(readline.Interface.prototype, 'on');
+          convert(2016);
+          sinon.assert.called(stub);
+          readline.Interface.prototype.on.restore();
+          sinon.assert.calledWith(stub,"line");
 
-    });
+   });
+  });
+
+   describe("Test on method of Interface for close event", function(err){
+   it("should be called", function() {
+          var stub = sinon.stub(readline.Interface.prototype,'on');
+          convert(2016);
+          readline.Interface.prototype.on.restore();
+          sinon.assert.calledWith(stub,"close");
    });
 
-    describe("Test on method of Interface for close event", function(err){
-    it("should be called", function() {
-           var stub = sinon.stub(readline.Interface.prototype,'on');
-           convert(2016);
-           readline.Interface.prototype.on.restore();
-           sinon.assert.calledWith(stub,"close");
-    });
-
- 	});
+ });
