@@ -20,13 +20,9 @@ convert = require("../js/indiaCensusCharu");
     });
 
    it('should fail if year is not a number', function(done){
-
-
         expect(convert.bind(undefined, {})).to.throw(Error, "Not a number");
         done();
     });
-
-
 
    describe("Test createInterface method of readline", function(err){
         it("should be called only once", function() {
@@ -36,6 +32,7 @@ convert = require("../js/indiaCensusCharu");
            sinon.assert.calledOnce(spyCreateInterface);
    });
  });
+
    describe("Test on method of Interface for line event", function(err){
    it("should be called", function() {
           var stub = sinon.stub(readline.Interface.prototype, 'on');
@@ -43,7 +40,6 @@ convert = require("../js/indiaCensusCharu");
           sinon.assert.called(stub);
           readline.Interface.prototype.on.restore();
           sinon.assert.calledWith(stub,"line");
-
    });
   });
 
