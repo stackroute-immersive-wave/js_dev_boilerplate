@@ -7,7 +7,7 @@ const fs = require('fs');
 if(typeof startYear=='string'){
     return "";
   }
-  
+
 if(typeof startYear !== 'number' || isNaN(startYear))
   {
         throw new Error('Not a number');
