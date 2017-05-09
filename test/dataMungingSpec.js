@@ -3,15 +3,13 @@ expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
-
-
 convert = require("../js/indiaCensusAmardeep");
 
 describe("A series of test for Converting  CSV to JSON",
   function(err){
 
     it("should return sucess message", function(done){
-      let result = convert(2016);
+      let result = convert(201);
       result.should.be.equal('JSON written successfully');
       done();
     });
@@ -71,6 +69,5 @@ describe("Test on method of Interface for close event", function(err){
    readline.Interface.prototype.on.restore();
    sinon.assert.calledWith(stub,"close");
  });
-
 });
 
