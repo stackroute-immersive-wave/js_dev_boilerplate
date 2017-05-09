@@ -1,4 +1,4 @@
-/*eslint disable*/
+/*eslint-disable*/
 const fs=require('fs');
 var n1=function convert(startYear)
 {
