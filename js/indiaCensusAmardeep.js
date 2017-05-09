@@ -43,9 +43,7 @@ let convert=function(year){
 		});
 	});
 
-	if(year===2011){
-		return "JSON written successfully";
-	}
+	return "JSON written successfully";
 
 }
 
