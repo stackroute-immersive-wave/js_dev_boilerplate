@@ -1,5 +1,4 @@
-module.exports = function convert(startYear)
-{const readline = require('readline');
+const readline = require('readline');
 const fs = require('fs');
 var data_1=[];
 var country=0;
@@ -8,6 +7,18 @@ var value=0;
 var indicator=0;
 
 var lineCount = 0;
+
+module.exports = function convert(startYear)
+{
+
+	if(typeof startYear=='string'){
+   return "";
+ }
+if(typeof startYear !== 'number' || isNaN(startYear))
+ {
+       throw new Error('Not a number');
+ }
+
 const rl = readline.createInterface({
   input: fs.createReadStream('../inputdata/Indicators.csv')
 });
@@ -22,15 +33,6 @@ rl.on('line', (data) => {
  // var cleanedLine =data.split(",");
 //  console.log(cleanedLine);
 	data_1=data.split(",");
-	if(lineCount==0)
-	{
-		country=data_1.indexOf("CountryName");
-		year=data_1.indexOf("Year");
-		value=data_1.indexOf("Value");
-		indicator=data_1.indexOf("IndicatorName");
-
-		lineCount++;
-	}
 	if(data_1[country]=='India')
 	{
 		 if(data_1[indicator]=='Rural population (% of total population)')
@@ -46,4 +48,6 @@ rl.on('close', (data) => {
  console.log(jsonobj);
 fs.writeFile('../outputdata/output.json',JSON.stringify(result,null,1));
 });
-};
+
+return 'JSON written successfully';
+}
