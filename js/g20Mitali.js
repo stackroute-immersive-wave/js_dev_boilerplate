@@ -54,21 +54,22 @@ b.push({"country":data_1[country_index],"population":data_1[population_index]});
 
 
 setTimeout(function(){
-    a.pop();
+        a.pop();
     a.pop();
     b.pop();
     b.pop();
     a.shift();
     b.shift();
+     a.sort(function(x,y){return parseFloat(y.gdp) - parseFloat(x.gdp)});
+    b.sort(function(x,y){return parseFloat(y.population) - parseFloat(x.population)});
  //    console.log(a);
     // console.log(b);
     a_json=JSON.stringify(a);
     b_json=JSON.stringify(b);
-    console.log(a_json);
-    console.log(b_json);
 
+    fs.writeFile('output1.json',a_json);
+    fs.writeFile('output2.json',b_json);
 },500);
-
 return 'JSON written successfully';
 
 }

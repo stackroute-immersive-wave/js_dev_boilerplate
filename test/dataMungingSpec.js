@@ -70,4 +70,3 @@ describe("Test on method of Interface for close event", function(err){
    sinon.assert.calledWith(stub,"close");
  });
 });
-
