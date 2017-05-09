@@ -1,9 +1,9 @@
-
 const should = require("chai").should(),
 expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
+<<<<<<< HEAD
 convert=require("..js/indiaCensusPradheep.js")
 
 describe("A series of test for Converting  CSV to JSON",
@@ -38,10 +38,10 @@ describe("A series of test for Converting  CSV to JSON",
         expect(convert.bind(undefined, Number(1960))).to.not.throw(Error, "Not a number");
         done();
     });
-});
+	});
 
 
-   describe("Test createInterface method of readline", function(err){
+describe("Test createInterface method of readline", function(err){
         it("should be called only once", function() {
            var spyCreateInterface = sinon.spy(readline, 'createInterface');
            convert(2016);
@@ -67,4 +67,4 @@ describe("A series of test for Converting  CSV to JSON",
           readline.Interface.prototype.on.restore();
           sinon.assert.calledWith(stub,"close");
    });
- });
+});
