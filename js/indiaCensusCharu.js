@@ -15,7 +15,6 @@ var a=[];
 const rl=readline.createInterface({
 	input: fs.createReadStream("../inputdata/final.csv")
 });
-
 rl.on("line",(line)=>{
 	
 	if(i==0){

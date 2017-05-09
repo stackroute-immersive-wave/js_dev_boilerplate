@@ -36,7 +36,8 @@ module.exports = (function(){
           diffObjs : []
         }
       }
-      function toDataMap(data) {
+      function toDataMap(data) {  
+        
         return data.map(toObjValueHash);
       }
       function toObjValueHash(obj) {
