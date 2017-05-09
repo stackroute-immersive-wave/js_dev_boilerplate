@@ -1,29 +1,20 @@
-/*eslint-disable*/
 const readline = require('readline');
 const fs = require('fs');
+let data = [];
+let i = 0;
+let countryIndex = 0;
+let populationIndex = 0;
+let gdpIndex = 0;
+let a = [];
+let b = [];
+let ajson = [];
+let bjson = [];
 
-
-var data=[];
-var data_1=[];
-var i=0,j=0;
-
-
-var a=[];
-var b=[];
-var a_json=[];
-var b_json=[];
-
-// let country_index=0;
-// let population_index=0;
-// let gdp_index=0;
-
-module.exports = function convert(startYear)
-{
-
-if(typeof startYear=='string'){
-  return "";
+module.exports = function convert(startYear) {
+if(typeof startYear === 'string') {
+  return '';
 }
-if (typeof startYear !== 'number' || isNaN (startYear)) {
+if (typeof startYear !== 'number' || isNaN(startYear)) {
   throw new Error('Not a number');
 }
 const rl = readline.createInterface({
@@ -31,45 +22,30 @@ const rl = readline.createInterface({
 });
 
 rl.on('line', (line) => {
-	console.log("lllllllllllllll"+line);
-
-
-if(i==0)
- {
-    data_1=line.split(',');
-    console.log("ssssssssssssssss"+data_1);
-    country_index=data_1.indexOf('Country Name');
-    console.log("uuuuuuuuuuuuuuuuuu"+country_index);
-    population_index=data_1.indexOf('Population (Millions) - 2013');
-    console.log("uuuuuuuuuuuuuuuuuu"+population_index);
-    gdp_index=data_1.indexOf('GDP Billions (US$) - 2013');
-    console.log("uuuuuuuuuuuuuuuuuu"+gdp_index);
-    i++;
+if(i === 0) {
+    data = line.split(',');
+    countryIndex = data.indexOf('Country Name');
+    populationIndex = data.indexOf('Population (Millions) - 2013');
+    gdpIndex = data.indexOf('GDP Billions (US$) - 2013');
+    i = 1;
 }
-
-data_1=line.split(',');
-
-a.push({"country":data_1[country_index],"gdp":data_1[gdp_index]});
-//console.log("ccccccccccountry ggggggggggdp"+a);
-   b.push({"country":data_1[country_index],"population":data_1[population_index]});
-
-
-
+data = line.split(',');
+a.push({country: data[countryIndex], gdp: data[gdpIndex]});
+   b.push({country: data[countryIndex], population: data[populationIndex]});
 });
-setTimeout(function(){
+setTimeout(function() {
     a.pop();
     a.pop();
     b.pop();
     b.pop();
-    //console.log(a);
-    //console.log(b);
-a_json=JSON.stringify(a);
-b_json=JSON.stringify(b);
-console.log(a[1].country);
-console.log(a_json);
-console.log(b_json);
-},500);
+    a.shift();
+    b.shift();
+a.sort(function(x, y) {return y.gdp - x.gdp;});
+    b.sort(function(x, y) {return y.population - x.population;});
+ajson = JSON.stringify(a);
+bjson = JSON.stringify(b);
+fs.writeFile('output1.json', ajson);
+ fs.writeFile('output2.json', bjson);
+}, 500);
 return 'JSON written successfully';
-}
-
- 
+};
