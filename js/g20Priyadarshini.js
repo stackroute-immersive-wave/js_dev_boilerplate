@@ -1,3 +1,4 @@
+/*eslint-disable*/
 const readline = require('readline');
 const fs = require('fs');
 
@@ -16,15 +17,14 @@ module.exports = function convert(startYear)
 {
 
 	if(typeof startYear=='string'){
-   return "";
- }
+    	return "";
+   }
 
-	if(typeof startYear !== 'number' || isNaN(startYear))
- {
+	if(typeof startYear !== 'number' || isNaN(startYear)) {
        throw new Error('Not a number');
- }
-const rl = readline.createInterface({
-  input: fs.createReadStream('table.csv')
+ 	}
+	const rl = readline.createInterface({
+    input: fs.createReadStream('table.csv')
 });
 
 rl.on('line', (line) => {
