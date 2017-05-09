@@ -1,3 +1,4 @@
+/*eslint-disable*/
 const should = require("chai").should(),
 expect = require("chai").expect,
 sinon = require('sinon'),
