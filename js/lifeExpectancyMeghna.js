@@ -46,16 +46,17 @@ module.exports = function convert(startYear)
     });
 
 rl.on('close', (line) => {
+	// for(i=0;i<arr.length;i++)
+	//   {
+	//   	var sum=0;
+	//   	sum=sum+arr[i].Female;
+	//   	console.log("Sum is"+sum);
+	//   }
 
 	  console.log(JSON.stringify(arr,null,4));
 
 		fs.writeFile('../outputdata/output.json',JSON.stringify(arr,null,1));
-	  // for(i=0;i<arr.length;i++)
-	  // {
-	  // 	var sum=0;
-	  // 	sum=sum+arr[i].Female;
-	  // 	console.log("Sum is"+sum);
-	  // }
+	  
 });
 return "JSON written successfully";
 };
