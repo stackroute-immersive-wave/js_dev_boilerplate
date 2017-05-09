@@ -12,6 +12,7 @@
 	{"year":"1970","LifeExpectancyAtBirthMale(years)":23576.88188887,"LifeExpectancyAtBirthFemale(years)":22075.415807109977},
 	{"year":"1971","LifeExpectancyAtBirthMale(years)":25864.8250668,"LifeExpectancyAtBirthFemale(years)":24222.897931279975},
 	{"year":"1972","LifeExpectancyAtBirthMale(years)":28165.121247629988,"LifeExpectancyAtBirthFemale(years)":26383.187786339986},
+<<<<<<< HEAD
 	{"year":"1973","LifeExpectancyAtBirthMale(years)":30478.919485229988,"LifeExpectancyAtBirthFemale(years)":28555.045283189982},
 	{"year":"1974","LifeExpectancyAtBirthMale(years)":32805.10138709999,"LifeExpectancyAtBirthFemale(years)":30738.64182375999},
 	{"year":"1975","LifeExpectancyAtBirthMale(years)":35144.49724912998,"LifeExpectancyAtBirthFemale(years)":32934.279925779985},
@@ -20,4 +21,7 @@
 	{"year":"1978","LifeExpectancyAtBirthMale(years)":42253.92270605995,"LifeExpectancyAtBirthFemale(years)":39603.91040836993},
 	{"year":"1979","LifeExpectancyAtBirthMale(years)":44659.09604806995,"LifeExpectancyAtBirthFemale(years)":41857.62594673994}
 ]
+=======
+	{"year":"1973","LifeExpectancyAtBirthMale(years)":30478.919485229988,"LifeExpectancyAtBirthFemale(years)":28555.045283189982},{"year":"1974","LifeExpectancyAtBirthMale(years)":32805.10138709999,"LifeExpectancyAtBirthFemale(years)":30738.64182375999},{"year":"1975","LifeExpectancyAtBirthMale(years)":35144.49724912998,"LifeExpectancyAtBirthFemale(years)":32934.279925779985},{"year":"1976","LifeExpectancyAtBirthMale(years)":37498.38850293997,"LifeExpectancyAtBirthFemale(years)":35143.43070858995},{"year":"1977","LifeExpectancyAtBirthMale(years)":39867.636505999966,"LifeExpectancyAtBirthFemale(years)":37366.334723949934},{"year":"1978","LifeExpectancyAtBirthMale(years)":42253.92270605995,"LifeExpectancyAtBirthFemale(years)":39603.91040836993},{"year":"1979","LifeExpectancyAtBirthMale(years)":44659.09604806995,"LifeExpectancyAtBirthFemale(years)":41857.62594673994}]
+>>>>>>> a4acdeda2d77b624c9b878e4fb2cc3942e73ddc5
     

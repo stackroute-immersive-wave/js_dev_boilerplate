@@ -1,23 +1,23 @@
 /*eslint-disable*/
 module.exports = function convert(startYear)
-{
-	
+	{
 	if(typeof startYear=='string')
 	{
-   return "";
- 	}
+	 return "";
+	}
 
-if(typeof startYear !== 'number' || isNaN(startYear))
- {
-       throw new Error('Not a number');
- }
+	if(typeof startYear !== 'number' || isNaN(startYear))
+	{
+	throw new Error('Not a number');
+	}
 
 	const readline = require('readline');
-const fs = require('fs');
+	const fs = require('fs');
 
-const rl = readline.createInterface({
-  input: fs.createReadStream('/home/user/Desktop/expectancy/js_dev_boilerplate/inputdata/Indicators(1).csv')
-});
+	const rl = readline.createInterface({
+	  input: fs.createReadStream('/home/user/Desktop/expectancy/js_dev_boilerplate/inputdata/Indicators(1).csv')
+	});
+	
  	var arr=[];
 	rl.on('line', (line) => 
 	{
