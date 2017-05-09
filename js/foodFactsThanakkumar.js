@@ -1,5 +1,5 @@
+/*eslint-disable*/
 var fs=require('fs');
-
 const readline = require('readline');
 module.exports = function convert(startYear)
 {if(typeof startYear=='string'){
@@ -19,7 +19,7 @@ var sugarindex=0,saltindex=0,countryindex=0,countryv = 0,sugar = 0,salt = 0,i=0;
 
 var sugarv = Array(9).fill(0);
 var saltv = Array(9).fill(0);
-
+console.log("hi");
 ln.on('line', function (line) {
 data=line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
  
@@ -58,7 +58,7 @@ ln.on('close', function() {
 }    
 
 console.log(final_c);
-fs.writeFile('chart1.json', JSON.stringify(final_c));    
+fs.writeFile('output.json', JSON.stringify(final_c));    
 
 });
 return "JSON written successfully";
