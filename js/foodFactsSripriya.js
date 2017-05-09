@@ -1,3 +1,4 @@
+/*eslint-disable*/
 var fs=require('fs');
 module.exports = function convert(startYear)
 {
