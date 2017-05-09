@@ -37,7 +37,7 @@ module.exports = (function(){
         }
       }
       function toDataMap(data) {  
-        console.log(JSON.stringify(data));
+        
         return data.map(toObjValueHash);
       }
       function toObjValueHash(obj) {
