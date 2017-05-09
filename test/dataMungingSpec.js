@@ -4,7 +4,7 @@ sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
 
-convert = require("../js/foodFactsThanakkumar");
+convert = require("../js/foodFactsThanakkumar.js");
 
 
 describe("A series of test for Converting  CSV to JSON",
