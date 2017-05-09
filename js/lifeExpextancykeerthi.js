@@ -5,6 +5,18 @@ let resultMale = [];
 let resultFemale = [];
 let totalMale = 0;
 let totalFemale = 0;
+
+module.exports = function convert(startYear)
+{
+	if(typeof startYear=='string'){
+   return "";
+ }
+
+
+	if(typeof startYear !== 'number' || isNaN(startYear))
+ {
+       throw new Error('Not a number');
+ }
 const rl = readline.createInterface({
   input: fs.createReadStream('Indicators(1).csv')
 });
@@ -42,3 +54,6 @@ rl.on('close', () => {
 fs.writeFile('output.json', (JSON.stringify(totalMale, null, 1)));
 fs.writeFile('output1.json', (JSON.stringify(totalFemale, null, 1)));
 });
+
+return "JSON written successfully"
+}
