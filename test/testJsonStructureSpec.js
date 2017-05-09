@@ -2,8 +2,10 @@ var chai = require('chai');
 var expect = chai.expect;
 var jsonDiff = require('./jsondiff');
 var totalObjectKeys = require('./totalObjectKeys');
-var expectedJSON = require('./ExpectedJSON/IndiaCensus1.json');
-var actualJSON = require('../outputdata/IndiaCensusAmardeep.json');
+
+var expectedJSON = require('./ExpectedJSON/worldDevIndicatorUrbanization1.json');
+var actualJSON = require('../outputdata/worldDevIndicatorUrbanizationAbhishek.json');
+
 describe('Test Application as Blackbox', function(){
   it ('Test JSON is well formed', function(done){
     done();
