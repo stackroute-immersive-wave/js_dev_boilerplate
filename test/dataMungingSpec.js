@@ -6,6 +6,7 @@ fs=require("fs"),
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 convert=require("../js/g20Uma");
 =======
 
@@ -15,6 +16,11 @@ convert = require("../js/worlddevurbanizationPavan.js");
 =======
 convert = require("../js/worldDevolopmentVijay.js");
 >>>>>>> c7b7bf66ff1c2c04b03ebda9e4d8a86fce7c946f
+=======
+
+convert = require("../js/foodFactsRandeep");
+
+>>>>>>> 17d93545a03f8005f31232d98803a127eec701bb
 
 describe("A series of test for Converting  CSV to JSON",
   function(err){
@@ -40,16 +46,21 @@ describe("A series of test for Converting  CSV to JSON",
          done();
      });
 
-    it('should not fail if the year is a literal number', function(done){
-         expect(convert.bind(undefined, '1960')).to.not.throw(Error, "Not a number");
-         done();
+
+   it('should not fail if the year is a literal number', function(done){
+        expect(convert.bind(undefined, '1960')).to.not.throw(Error, "Not a number");
+        done();
     });
 
     it('should not fail if the year is a Number object', function(done){
          expect(convert.bind(undefined, Number(1960))).to.not.throw(Error, "Not a number");
          done();
      });
-});
+
+
+
+ });
+
 
 describe("Test createInterface method of readline", function(err){
 		it("should be called only once", function() {
@@ -79,6 +90,8 @@ describe("Test createInterface method of readline", function(err){
     });
 
 
+
  	});
+
 
 
