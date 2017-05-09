@@ -1,4 +1,5 @@
-/
+/*eslint-disable*/
+
 module.exports = function convert(startYear)
 {
 
