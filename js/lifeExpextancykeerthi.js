@@ -8,7 +8,7 @@ let totalFemale = 0;
 
 module.exports = function convert(startYear)
 {
-	if(typeof startYear=='string'){
+	if(typeof startYear==='string'){
    return "";
  }
 
