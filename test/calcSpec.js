@@ -8,9 +8,9 @@ describe.only("Test add method of calc", function(){
            var result = add(5,10);
   	       result.should.be.equal(15);
     });
-<<<<<<< HEAD
-  });
-=======
 
   });
->>>>>>> a4acdeda2d77b624c9b878e4fb2cc3942e73ddc5
+
+
+  });
+
