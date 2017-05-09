@@ -5,7 +5,7 @@ let n1 = function convert(startYear) {
   });
   if (isNaN(startYear)) {
     throw new Error('Not a number');
-  }
+    }
   let array = [];
   lineReader.on('line', function(line) {
     let linearray = line.split(',');
