@@ -1,3 +1,4 @@
+/* eslint-disable */
 const fs = require('fs');
 let n1 = function convert(startYear) {
   let lineReader = require('readline').createInterface({
