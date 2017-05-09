@@ -21,9 +21,10 @@ describe("A series of test for Converting  CSV to JSON",
       done();
     });
 
-    it('should fail if year is not a number', function(done){
-      expect(convert.bind(undefined, {})).to.throw(Error, "Not a number");
-      done();
+
+   it('should fail if year is not a number', function(done){
+        expect(convert.bind(undefined, {})).to.throw(Error, "Not a number");
+        done();
     });
 
     it('should fail if year is NaN', function(done){
@@ -34,6 +35,7 @@ describe("A series of test for Converting  CSV to JSON",
     it('should not fail if the year is a literal number', function(done){
      expect(convert.bind(undefined, '1960')).to.not.throw(Error, "Not a number");
      done();
+
    });
 
    it('should not fail if the year is a Number object', function(done){
