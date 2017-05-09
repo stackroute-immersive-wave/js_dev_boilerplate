@@ -55,8 +55,8 @@ rl.on('line', (data) => {
 	}
 });
 rl.on('close', () => {
-JSON.stringify(result, null, 1);
-fs.writeFile('../outputdata/.json', JSON.stringify(result, null, 1));
+// JSON.stringify(result, null, 1);
+fs.writeFile('../outputdata/urbanVanithajson.json', JSON.stringify(result, null, 1));
 });
 return 'JSON written successfully';
 };
