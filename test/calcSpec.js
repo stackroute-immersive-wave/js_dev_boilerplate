@@ -1,4 +1,3 @@
-/*eslint-disable*/
 const should = require("chai").should(),
 expect = require("chai").expect,
 sinon = require('sinon'),
@@ -9,5 +8,4 @@ describe("Test add method of calc", function(){
            var result = add(5,10);
   	       result.should.be.equal(15);
     });
-		});
-
+  });
