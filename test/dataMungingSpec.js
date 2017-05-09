@@ -4,12 +4,10 @@ expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
-convert=require("..js/indiaCensusPradheep")
-
+convert=require("..js/indiaCensusPradheep.js")
 
 describe("A series of test for Converting  CSV to JSON",
 	function(err){
-
   it("should return sucess message", function(done){
   	var result = convert(2001);
   	result.should.be.equal('JSON written successfully');
@@ -26,7 +24,6 @@ describe("A series of test for Converting  CSV to JSON",
         done();
     });
 
-
    it('should fail if year is NaN', function(done){
         expect(convert.bind(undefined, NaN)).to.throw(Error, "Not a number");
         done();
@@ -42,7 +39,6 @@ describe("A series of test for Converting  CSV to JSON",
         done();
     });
 });
-
 
 
    describe("Test createInterface method of readline", function(err){
