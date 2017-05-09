@@ -1,50 +1,48 @@
-/*eslint-disable*/
+let log4js = require('log4js');
+let logger = log4js.getLogger();
+
 module.exports = function convert(startYear)
 {
-	if(isNaN(startYear)){
-		throw new "Not a number";
+	if(isNaN(startYear)) {
+		throw new Error('Not a number');
 	}
 	else{
-	const readline=require("readline");
-	const fs=require("fs");
+		const readline = require('readline');
+		const fs = require('fs');
 
-var i=0;
-var data=[];
-var a=[];
+		let i = 0;
+		let data = [];
+		let a = [];
+		let stateName;
+		let literatePer;
+		let ageGr;
+		const rl = readline.createInterface({
+			input: fs.createReadStream('../inputdata/final.csv')
+		});
 
-const rl=readline.createInterface({
-	input: fs.createReadStream("../inputdata/final.csv")
-});
+		rl.on('line', (line)=>{
+			if(i === 0) {
+				let cleanedLine = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+				cleanedLine = line.split(',');
+				data = cleanedLine;
+				ageGr = data.indexOf('Age-group');
+				literatePer = data.indexOf('Literate - Persons');
+				stateName = data.indexOf('Area Name');
+				i = i + 1;
+			}
+			else{
+				data = line.split(',');
+				a.push({ageGroup: data[ageGr], literatePersons: data[literatePer],
+					areaName: data[stateName]});
+				let record = JSON.stringify(a);
+				fs.writeFile('../outputdata/indiaCensusCharu.json', record);
+				logger.debug(record);
+			}
+		});
 
-rl.on("line",(line)=>{
-	
-	if(i==0){
-
-		var cleanedLine =line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-		
-		var cleanedLine=line.split(",");
-		data=cleanedLine;
-		ageGroup=data.indexOf("Age-group");
-		literatePersons=data.indexOf("Literate - Persons");
-		areaName=data.indexOf("Area Name");
-		i++;
+		rl.on('close', ()=>{
+			logger.debug('file closed');
+		});
+	return 'JSON written successfully';
 	}
-	data=line.split(",");
-
-	//if(data[ageGroup])
-
-	a.push({"Age_Group":data[ageGroup],"Literate_Persons":data[literatePersons],"Area_Name":data[areaName]});
-
-	record=JSON.stringify(a);
-
-	fs.writeFile("../outputdata/indiaCensusCharu.json",record);
-	console.log(record);
-});
-
-rl.on("close",(line)=>{
-	console.log("file closed");
-
-});
-return "JSON written successfully";
-}
 };
