@@ -3,7 +3,7 @@ expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
-<<<<<<< HEAD
+
 convert = require("../js/g20Mitali");
 
 
