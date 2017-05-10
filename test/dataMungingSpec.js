@@ -1,11 +1,15 @@
 
-const should=require('chai').should(),
+
+
+const should = require("chai").should(),
 expect = require("chai").expect,
 sinon = require('sinon'),
 readline = require("readline"),
 fs=require("fs"),
 
+
 convert = require('../js/cicagoCrimeHema');
+
 
 describe("A series of test for Converting  CSV to JSON",
   function(err){
@@ -20,6 +24,9 @@ describe("A series of test for Converting  CSV to JSON",
 
 
    /* it('should fail if year is notprovided', function(done){
+=======
+    it('should fail if year is notprovided', function(done){
+>>>>>>> b32ee26406205bc5582de541110666b1d2948076
       expect(convert).to.throw(Error, "Not a number");
       done();
     });
@@ -32,7 +39,9 @@ describe("A series of test for Converting  CSV to JSON",
     it('should fail if year is NaN', function(done){
       expect(convert.bind(undefined, NaN)).to.throw(Error, "Not a number");
       done();
+<<<<<<< HEAD
     });*/
+
 
     it('should not fail if the year is a literal number', function(done){
       expect(convert.bind(undefined, '1960')).to.not.throw(Error, "Not a number");
@@ -46,6 +55,7 @@ describe("A series of test for Converting  CSV to JSON",
 
 
 });
+
 describe("Test createInterface method of readline", function(err){
       it("should be called only once", function() {
          var spyCreateInterface = sinon.spy(readline, 'createInterface');

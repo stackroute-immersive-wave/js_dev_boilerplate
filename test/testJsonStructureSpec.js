@@ -5,10 +5,15 @@ var totalObjectKeys = require('./totalObjectKeys');
 // var expectedJSON = require('./ExpectedJSON/worldDevIndicatorUrbanization1.json');
 // var actualJSON = require('../outputdata/worldDevIndicatorUrbanizationAbhishek.json');
 
+var expectedJSON = require('./ExpectedJSON/worldDevIndicatorUrbanization1.json');
+var actualJSON = require('../outputdata/worldDevIndicatorUrbanizationAbhishek.json');
+
+
 describe('Test Application as Blackbox', function(){
   it ('Test JSON is well formed', function(done){
     done();
   });
+
   // it('JSON has expected Number of Objects', function(done){
   //  var expectedObjMatrix = totalObjectKeys.traverse(expectedJSON);
   //  var actualObjMatrix = totalObjectKeys.traverse(actualJSON);
@@ -22,4 +27,5 @@ describe('Test Application as Blackbox', function(){
   //   expect(compareResult.diffs).equal(0);
   //   done();
   // });
-})
+  
+});
