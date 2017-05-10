@@ -1,65 +1,60 @@
 /*eslint-disable*/
 const readline = require('readline');
 const fs = require('fs');
-var data_1=[];
+let data = [];
+let resultMale = [];
+let resultFemale = [];
+let totalMale = 0;
+let totalFemale = 0;
 
-var result=[];
-
-
-var i=0;
-
-var total=0;
 module.exports = function convert(startYear)
 {
+	if(typeof startYear==='string'){
+   return "";
+ }
 
-	if(typeof startYear=='string'){
-	   return "";
-	 }
 
-	if(typeof startYear !== 'number' || isNaN(startYear)) {
-        	throw new Error('Not a number');
-	 }
-	 
+	if(typeof startYear !== 'number' || isNaN(startYear))
+ {
+       throw new Error('Not a number');
+ }
 const rl = readline.createInterface({
-  input: fs.createReadStream('../inputdata/Indicators(1).csv')
+  input: fs.createReadStream('Indicators(1).csv')
 });
-
 rl.on('line', (line) => {
- 
-
- data_1=line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-
-//console.log(count);
-
-if (data_1[0]=="Indonesia" || data_1[0]=="Iraq" || data_1[0]=="Iran, Islamic Rep." || data_1[0]=="Colombia" || data_1[0]== "Bangladesh"){
-
-if(data_1[3]=="SP.DYN.LE00.FE.IN"){
-obj={};
- x="CountryName";
- y="Year";
-
- f="female";
-obj[x]=data_1[0];
-obj[y]=data_1[4];
-obj[f]=data_1[5];
-}
-if(data_1[3]=="SP.DYN.LE00.MA.IN"){
- m="male";
-obj[m]=data_1[5];
-result.push(obj);
-}
-}
-
-console.log(result);
-for(i=0;i<=55;i++)
+data = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+if(data[0] === 'Indonesia' || data[0] === 'Iraq' || data[0] === 'Colombia' ||
+data[0] === 'Bangladesh')
 {
-total=+result[2];
-
-console.log(total);
-
-}});
-rl.on('close', (line) => {
- console.log(JSON.stringify(result,null,1));
+if(data[3] === 'SP.DYN.LE00.FE.IN') {
+ resultFemale.push({ country: data[0], year: data[4], gender: data[5]});
+}
+if(data[3] === 'SP.DYN.LE00.MA.IN')
+{
+resultMale.push({ country: data[0], year: data[4], gender: data[5]});
+}
+}
+function addMale(rm)
+ {
+	for(let i = 0; i < rm.length; i = i + 1)
+	{
+/*eslint-disable*/totalMale = totalMale + parseInt(rm[i].gender);
+	}
+return totalMale;
+}
+addMale(resultMale);
+function addFemale(rf) {
+	for(let i = 0; i < rf.length; i = i + 1) {
+/*eslint-disable*/totalFemale = totalFemale + parseInt(rf[i].gender);
+	}
+return totalFemale;
+}
+addFemale(resultFemale);
 });
- return "JSON written successfully";
-} 
+rl.on('close', () => {
+fs.writeFile('output.json', (JSON.stringify(totalMale, null, 1)));
+fs.writeFile('output1.json', (JSON.stringify(totalFemale, null, 1)));
+});
+
+return "JSON written successfully"
+}
