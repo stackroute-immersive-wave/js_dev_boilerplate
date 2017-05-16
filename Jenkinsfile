@@ -3,7 +3,7 @@ node {
   sh "env"
 
   stage 'Checkout Repository'
-  git url: 'https://github.com/stackroute-immersive-wave/js_dev_boilerplate.git', branch: "${env.BRANCH_NAME}"
+  git url: 'https://github.com/stackroute-immersive-wave/js_dev_boilerplate.git', branch: "js_dev_boilerplate_minimal_structure"
 
   stage 'Installing Dependencies'
   sh "npm prune"
