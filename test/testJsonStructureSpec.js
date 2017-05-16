@@ -2,7 +2,7 @@ var chai = require('chai');
 var expect = chai.expect;
 var jsonDiff = require('./jsondiff');
 var totalObjectKeys = require('./totalObjectKeys');
-var expectedJSON = require('./expectedJSON/worldDevIndicatorUrbanization1.json');
+var expectedJSON = require('./ExpectedJSON/worldDevIndicatorUrbanization1.json');
 var actualJSON = require('../outputdata/worldDevIndicatorUrbanization.json');
 
 describe('Test Application in Blackbox', function(){
