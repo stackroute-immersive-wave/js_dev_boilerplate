@@ -1,6 +1,7 @@
-# JS Boilerplate Code
+# JS Data Munging Boilerplate Code
 
 ## Supports
+
 - eslint
 - Mocha
 - Chai
